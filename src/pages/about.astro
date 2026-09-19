@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="About"
+  description={`About ${site.name} — our mission, how we test gear, and how we make money.`}
+>
+  <section class="page">
+    <div class="container container--narrow">
+      <h1>About Gearky</h1>
+      <div class="prose">
+        <p>
+          Gearky is an independent buying guide for PlayStation accessories, storage
+          upgrades, and console decisions. We test controllers, SSDs, cables, skins, and
+          more, then write honest, detailed reviews that help you buy the right thing the
+          first time.
+        </p>
+        <h2>How we test</h2>
+        <p>
+          We buy or borrow the gear we review and use it in real-world play sessions —
+          not just on paper. We measure what matters (battery life, input latency, build
+          quality, compatibility) and call out both the strengths and the trade-offs.
+        </p>
+        <h2>How we make money</h2>
+        <p>
+          Gearky is reader-supported. When you buy through links on our site, we may earn
+          an affiliate commission. This never affects
+          our editorial opinions, and you never pay more by using our links. Read our{' '}
+          <a href="/disclosure/">full disclosure</a>.
+        </p>
+        <h2>Get in touch</h2>
+        <p>
+          Have a question, a product suggestion, or a correction?{' '}
+          <a href="/contact/">Contact us</a> — we read every message.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: var(--space-12);
+  }
+</style>

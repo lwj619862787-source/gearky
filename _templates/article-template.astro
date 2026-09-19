@@ -1,0 +1,85 @@
+---
+// =============================================================================
+//  ARTICLE TEMPLATE — Gearky
+// -----------------------------------------------------------------------------
+//  HOW TO USE:
+//  1. Copy this file into a category folder under src/pages/, e.g.:
+//       src/pages/controllers/<your-slug>.astro
+//       src/pages/storage/<your-slug>.astro
+//       src/pages/console/<your-slug>.astro
+//       src/pages/deals/<your-slug>.astro
+//  2. Rename the file to a URL-safe slug (lowercase, hyphens, no spaces).
+//     The URL will be https://gearky.com/<category>/<your-slug>/
+//  3. Fill in the `meta` object below (all required fields).
+//  4. Write your article body inside the <ArticleLayout> tags.
+//
+//  The article will automatically appear on the homepage and its category page.
+//  No index file or registry needs to be updated.
+// =============================================================================
+
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+export const meta = {
+  title: 'Best Hall Effect PS5 Controller', // <-- your article title
+  description:
+    'A short, compelling summary (120-160 chars) used for SEO and listings.',
+  category: 'controllers', // controllers | storage | console | deals
+  type: 'review', // review | list | guide | comparison | qa
+  keyword: 'hall effect ps5 controller', // primary target keyword
+  date: '2026-01-15', // publish date (YYYY-MM-DD)
+  updated: '2026-01-15', // optional last-updated date
+  image: '/images/placeholder.svg', // hero image path
+  featured: false, // set true to feature on the homepage
+  rating: 4.7, // optional, out of 5 (for reviews)
+  affiliateUrl: 'https://example.com/product', // optional full affiliate/product link
+  author: 'Gearky Team',
+};
+---
+
+<ArticleLayout
+  meta={meta}
+  pros={[
+    'List a couple of genuine strengths here',
+    'Build quality, battery life, or value',
+  ]}
+  cons={[
+    'List any trade-offs honestly',
+    'E.g. price or a missing feature',
+  ]}
+  faqs={[
+    {
+      q: 'Is this controller compatible with PS5?',
+      a: 'Write a short, direct answer here.',
+    },
+  ]}
+>
+  <!-- ===================== ARTICLE BODY (write your content here) ===================== -->
+
+  <p>
+    Write your introduction here. Answer the search intent right away, mention the
+    product name and your bottom-line verdict in the first paragraph.
+  </p>
+
+  <h2>What it is</h2>
+  <p>Describe the product, key specs, and what makes it worth considering.</p>
+
+  <h2>Performance and feel</h2>
+  <p>
+    Cover the details that matter to buyers — real-world performance, comfort, and any
+    notable features. Add your own experience and specific numbers where possible.
+  </p>
+
+  <h2>Who should buy it</h2>
+  <p>
+    Give a clear recommendation. Who is this for, and who should look elsewhere? Keep it
+    honest and specific.
+  </p>
+
+  <h2>Final verdict</h2>
+  <p>
+    Summarize your rating and the one-line takeaway. Use natural, varied sentence
+    structure — no filler phrases.
+  </p>
+
+  <!-- ===================== END ARTICLE BODY ===================== -->
+</ArticleLayout>

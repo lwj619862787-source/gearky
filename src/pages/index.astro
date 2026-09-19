@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Card from '../components/Card.astro';
+import { site, categories } from '../data/site';
+import { collectPosts } from '../lib/posts';
+
+const raw = import.meta.glob('./*/*.astro', { eager: true });
+const posts = collectPosts(raw);
+const featured = posts.filter((p) => p.featured).slice(0, 3);
+const latest = posts.slice(0, 6);
+---
+
+<BaseLayout
+  title="PS5 Controllers, SSD Upgrades & Console Guides"
+  description={site.description}
+  canonicalUrl={site.url}
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="hero-eyebrow">Independent PlayStation gear reviews</span>
+      <h1 class="hero-title">The right gear for your PlayStation.</h1>
+      <p class="hero-sub">
+        Honest reviews and buying guides for controllers, accessories, SSD storage,
+        console upgrades, and the best deals — tested by real players.
+      </p>
+      <div class="hero-actions">
+        <a href="/controllers/" class="btn btn-primary">Browse Controllers</a>
+        <a href="/storage/" class="btn btn-ghost">SSD Upgrades</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Explore by category</h2>
+      <div class="category-grid">
+        {
+          categories.map((c) => (
+            <a href={`/${c.slug}/`} class="category-card">
+              <span class="category-label">{c.label}</span>
+              <h3 class="category-name">{c.title}</h3>
+              <p class="category-blurb">{c.blurb}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  {
+    featured.length > 0 && (
+      <section class="section section--alt">
+        <div class="container">
+          <h2 class="section-title">Featured guides</h2>
+          <div class="card-grid">
+            {featured.map((p) => <Card post={p} />)}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Latest guides</h2>
+      {
+        latest.length > 0 ? (
+          <div class="card-grid">
+            {latest.map((p) => <Card post={p} />)}
+          </div>
+        ) : (
+          <p class="empty-note">
+            New guides are on the way. Check back soon — or start with our{' '}
+            <a href="/controllers/">controller reviews</a>.
+          </p>
+        )
+      }
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background:
+      radial-gradient(60% 120% at 80% -20%, rgba(21, 94, 239, 0.35), transparent 60%),
+      var(--color-dark);
+    color: var(--color-on-dark);
+    padding-block: var(--space-20);
+  }
+  .hero-inner {
+    max-width: 720px;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #8fb3ff;
+    margin-bottom: var(--space-4);
+  }
+  .hero-title {
+    color: #fff;
+    margin-bottom: var(--space-4);
+  }
+  .hero-sub {
+    color: var(--color-on-dark-muted);
+    font-size: 1.15rem;
+    margin-bottom: var(--space-8);
+    max-width: 54ch;
+  }
+  .hero-actions {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+  .btn-ghost {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+  }
+
+  .section-title {
+    margin-bottom: var(--space-8);
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-5);
+  }
+  .category-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    color: inherit;
+    transition: transform var(--transition-base), box-shadow var(--transition-base),
+      border-color var(--transition-base);
+  }
+  .category-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+    color: inherit;
+  }
+  .category-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+  }
+  .category-name {
+    font-size: 1.2rem;
+  }
+  .category-blurb {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .section--alt {
+    background: var(--color-surface);
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+
+  .empty-note {
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-10);
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .category-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 560px) {
+    .category-grid {
+      grid-template-columns: 1fr;
+    }
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

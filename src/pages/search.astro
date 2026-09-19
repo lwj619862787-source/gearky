@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+import { collectPosts } from '../lib/posts';
+
+const posts = collectPosts(import.meta.glob('./*/*.astro', { eager: true }));
+const index = posts.map((p) => ({
+  title: p.title,
+  url: `/${p.category}/${p.slug}/`,
+  description: p.description,
+}));
+---
+
+<BaseLayout
+  title="Search"
+  description={`Search ${site.name} for controller, storage, console, and deal guides.`}
+>
+  <section class="page">
+    <div class="container container--narrow">
+      <h1>Search</h1>
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="Search guides and reviews..."
+        autocomplete="off"
+      />
+      <ul id="search-results" class="search-results"></ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ index }}>
+  const input = document.getElementById('search-input');
+  const results = document.getElementById('search-results');
+
+  function render(q) {
+    const term = q.trim().toLowerCase();
+    const matches = term
+      ? index.filter((item) =>
+          (item.title + ' ' + item.description).toLowerCase().includes(term)
+        )
+      : [];
+
+    if (matches.length) {
+      results.innerHTML = matches
+        .map(
+          (m) =>
+            `<li><a href="${m.url}">${m.title}</a><p>${m.description}</p></li>`
+        )
+        .join('');
+    } else {
+      results.innerHTML = `<li class="empty">${
+        term ? 'No results. Try a different keyword.' : 'Type to search our guides.'
+      }</li>`;
+    }
+  }
+
+  input.addEventListener('input', () => render(input.value));
+  const q = new URLSearchParams(location.search).get('q') || '';
+  input.value = q;
+  render(q);
+</script>
+
+<style>
+  .page {
+    padding-block: var(--space-12);
+  }
+  .search-input {
+    width: 100%;
+    padding: var(--space-4);
+    font-size: 1.05rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-6);
+  }
+  .search-results {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-4);
+  }
+  .search-results li {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+  }
+  .search-results a {
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .search-results p {
+    margin: var(--space-2) 0 0;
+    color: var(--color-text-muted);
+  }
+  .search-results .empty {
+    color: var(--color-text-muted);
+    border-style: dashed;
+  }
+</style>

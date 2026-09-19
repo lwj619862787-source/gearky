@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Contact"
+  description={`Contact the ${site.name} team.`}
+  noindex
+>
+  <section class="page">
+    <div class="container container--narrow">
+      <h1>Contact us</h1>
+      <div class="prose">
+        <p>
+          We'd love to hear from you. Reach out for product suggestions, corrections,
+          partnership inquiries, or just to say hi.
+        </p>
+        <p>
+          Email: <a href={`mailto:${site.email}`}>{site.email}</a>
+        </p>
+        <p>
+          We aim to respond within 2–3 business days. For product review requests, please
+          include a link to the product and any relevant press materials.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: var(--space-12);
+  }
+</style>

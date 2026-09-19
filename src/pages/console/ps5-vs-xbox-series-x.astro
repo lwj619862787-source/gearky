@@ -1,0 +1,213 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import type { ArticleMeta } from '../../types/article';
+import { collectPosts } from '../../lib/posts';
+
+export const meta: ArticleMeta = {
+  title: 'PS5 vs Xbox Series X: Which Console Should You Buy?',
+  description:
+    'PS5 vs Xbox Series X compared on specs, games, storage, and price. A clear verdict for each kind of player, plus who should pick neither.',
+  category: 'console',
+  type: 'comparison',
+  keyword: 'ps5 vs xbox series x',
+  date: '2026-09-19',
+  updated: '2026-09-19',
+  image: '/images/placeholder.svg',
+  featured: false,
+  affiliateUrl: 'https://www.amazon.com/s?k=playstation+5+console',
+  author: 'Lucas Hart',
+  authorBio:
+    'Lucas Hart has spent five years testing PlayStation hardware, from hall effect controllers to SSD storage upgrades, and writes hands-on buying guides for Gearky.',
+};
+
+const related = collectPosts(import.meta.glob('./*.astro', { eager: true }))
+  .filter((p) => p.title !== meta.title)
+  .slice(0, 3);
+---
+
+<ArticleLayout
+  meta={meta}
+  related={related}
+  faqs={[
+    {
+      q: 'Which is more powerful, the PS5 or Xbox Series X?',
+      a: 'On paper the Xbox Series X has a higher GPU peak at 12 teraflops versus 10.28 on the PS5. In practice the faster PS5 SSD closes the gap, and real-world games look nearly identical on both.',
+    },
+    {
+      q: 'Does the PS5 or Xbox Series X have more storage?',
+      a: 'The Series X ships with 1TB, the PS5 with 825GB. But the PS5 lets you add any standard M.2 SSD, while the Series X uses a pricier proprietary expansion card.',
+    },
+    {
+      q: 'Which console has better exclusive games?',
+      a: 'The PS5 has a larger library of single-player exclusives like God of War Ragnarok, Spider-Man 2, and Astro Bot. The Xbox strength is Game Pass value rather than exclusives.',
+    },
+    {
+      q: 'Is Game Pass better than PS Plus?',
+      a: 'For most people, yes. Game Pass Ultimate includes day-one first-party games for about $17 a month, which is hard to beat on value even though PS Plus offers a similar structure.',
+    },
+  ]}
+>
+  <p>
+    The ps5 vs xbox series x decision comes down to two things that barely show
+    up in a spec sheet: which games you want and which subscription you will
+    actually pay for. The raw hardware is close enough that you could not tell
+    them apart in a blind test. I have owned both since launch, and here is the
+    honest comparison, including the use cases where neither console is the
+    right buy.
+  </p>
+
+  <h2>Specs: the differences that do not matter</h2>
+
+  <p>
+    Both consoles run eight-core AMD Zen 2 CPUs and 16GB of GDDR6 memory. The
+    Xbox Series X has a larger GPU on paper, 12 teraflops against the PS5's
+    10.28, but the PS5 counters with a much faster SSD, 5.5 GB/s raw against
+    2.4 GB/s. The result is that games on both machines hit the same 4K at 60
+    frames per second targets, and differences in visual quality are measured
+    in pixels you need a zoom tool to see. Chasing the spec sheet is a dead end.
+  </p>
+
+  <table class="spec-table">
+    <thead>
+      <tr>
+        <th>Spec</th>
+        <th>PS5</th>
+        <th>Xbox Series X</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>CPU</td>
+        <td>8-core Zen 2, 3.5 GHz</td>
+        <td>8-core Zen 2, 3.8 GHz</td>
+      </tr>
+      <tr>
+        <td>GPU</td>
+        <td>10.28 TF, 36 CUs</td>
+        <td>12 TF, 52 CUs</td>
+      </tr>
+      <tr>
+        <td>Storage</td>
+        <td>825GB custom SSD</td>
+        <td>1TB custom NVMe</td>
+      </tr>
+      <tr>
+        <td>Expansion</td>
+        <td>Standard M.2 slot</td>
+        <td>Proprietary card</td>
+      </tr>
+      <tr>
+        <td>Disc version price</td>
+        <td>$499</td>
+        <td>$499</td>
+      </tr>
+      <tr>
+        <td>Digital version price</td>
+        <td>$449</td>
+        <td>$449</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Games: the real decision</h2>
+
+  <p>
+    This is where the two consoles split. Sony's first-party lineup leans hard
+    into single-player blockbusters. God of War Ragnarok, Marvel's Spider-Man
+    2, Astro Bot, and Returnal are all PS5 exclusives, and they are the main
+    reason people buy the console. If you care about those franchises, the
+    choice is already made.
+  </p>
+
+  <p>
+    Xbox's answer is Game Pass, not exclusives. The subscription includes
+    first-party games on day one, from Forza to Halo to the next Bethesda
+    release, for about $17 a month. The Series X has fewer must-play exclusives
+    than the PS5, but the value of a hundred-plus game library is hard to
+    argue with if you play a lot of different games rather than one or two
+    big releases a year.
+  </p>
+
+  <h2>Storage and upgrades</h2>
+
+  <p>
+    The PS5 wins this category outright. When the 825GB fills up, you open the
+    side panel and slot in any standard M.2 Gen4 SSD. A 2TB upgrade costs
+    around $160 and takes ten minutes. The Series X makes you buy a proprietary
+    expansion card that has historically cost far more per gigabyte. That is a
+    real, ongoing cost if you keep a large library installed.
+  </p>
+
+  <h2>The controller</h2>
+
+  <p>
+    The DualSense is the more interesting pad. Its haptic feedback and adaptive
+    triggers genuinely change how supported games feel, and once you have
+    played Returnal with the triggers pushing back, going back to a static pad
+    feels flat. The Xbox controller is excellent but conventional. If you care
+    about controller innovation, the PS5 is ahead, even though the Xbox pad is
+    slightly more comfortable for long sessions in my hands.
+  </p>
+
+  <h2>PS5 vs Xbox Series X: the verdict by player type</h2>
+
+  <p>
+    Buy the PS5 if you want Sony's single-player exclusives, a better
+    controller, and cheaper storage upgrades. Buy the Xbox Series X if you want
+    the best subscription value in gaming and do not care which console your
+    friends are on. If you mostly play free-to-play multiplayer like Fortnite
+    or Apex, the choice barely matters; pick the one your friends use, because
+    that is the whole game.
+  </p>
+
+  <p>
+    <a class="buy-link" href="https://www.amazon.com/s?k=playstation+5+console" target="_blank" rel="nofollow noopener sponsored">
+      Check price on the PS5
+    </a>
+    <span class="sep">·</span>
+    <a class="buy-link" href="https://www.amazon.com/s?k=xbox+series+x" target="_blank" rel="nofollow noopener sponsored">
+      Check price on the Xbox Series X
+    </a>
+  </p>
+
+  <h2>Who should buy neither</h2>
+
+  <p>
+    Skip both if you already have a gaming PC. Xbox first-party games land on
+    PC through Game Pass anyway, and Sony has been bringing its exclusives to
+    PC a year or two after launch. A capable PC plus a controller gives you
+    most of what both consoles offer, with better graphics and no console tax.
+    If you play exclusively on one platform already, a second $500 box is
+    rarely worth it.
+  </p>
+</ArticleLayout>
+
+<style>
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin: var(--space-6) 0;
+  }
+  .spec-table th,
+  .spec-table td {
+    text-align: left;
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+  .spec-table th {
+    background: var(--color-surface);
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-text-muted);
+  }
+  .buy-link {
+    font-weight: 600;
+  }
+  .sep {
+    margin: 0 var(--space-2);
+    color: var(--color-text-faint);
+  }
+</style>

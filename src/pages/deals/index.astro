@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategoryLanding from '../../components/CategoryLanding.astro';
+import { getCategory } from '../../data/site';
+import { collectPosts } from '../../lib/posts';
+
+const category = getCategory('deals')!;
+const posts = collectPosts(import.meta.glob('./*.astro', { eager: true }));
+---
+
+<BaseLayout title={category.title} description={category.description}>
+  <CategoryLanding category={category} posts={posts} />
+</BaseLayout>

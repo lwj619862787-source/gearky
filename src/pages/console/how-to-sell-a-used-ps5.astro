@@ -1,0 +1,135 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import type { ArticleMeta } from '../../types/article';
+import { collectPosts } from '../../lib/posts';
+
+export const meta: ArticleMeta = {
+  title: 'How to Sell a Used PS5 for the Most Money',
+  description:
+    'A step-by-step guide to selling a used PS5 safely. Where to list it, how to price it, and the exact reset steps before you hand it over.',
+  category: 'console',
+  type: 'guide',
+  keyword: 'how to sell a used ps5',
+  date: '2026-09-19',
+  updated: '2026-09-19',
+  image: '/images/placeholder.svg',
+  featured: false,
+  affiliateUrl: 'https://www.amazon.com/s?k=playstation+5+console',
+  author: 'Lucas Hart',
+  authorBio:
+    'Lucas Hart has spent five years testing PlayStation hardware, from hall effect controllers to SSD storage upgrades, and writes hands-on buying guides for Gearky.',
+};
+
+const related = collectPosts(import.meta.glob('./*.astro', { eager: true }))
+  .filter((p) => p.title !== meta.title)
+  .slice(0, 3);
+---
+
+<ArticleLayout
+  meta={meta}
+  related={related}
+  faqs={[
+    {
+      q: 'How much is a used PS5 worth in 2026?',
+      a: 'A clean, working disc model in good condition typically sells for roughly $300 to $400 privately, depending on included games, controllers, and box. Digital models sell for about $40 to $60 less.',
+    },
+    {
+      q: 'Should I factory reset before selling?',
+      a: 'Yes, always. A factory reset wipes your account and data from the console. Do it only after backing up saves and deactivating the console as your primary device.',
+    },
+    {
+      q: 'Is it better to sell privately or trade in?',
+      a: 'Private sale earns more, usually 30 to 40 percent more than a trade-in. A trade-in at GameStop or an online buyback service is instant but pays less.',
+    },
+    {
+      q: 'What should I include when selling?',
+      a: 'Include the HDMI cable, power cable, at least one controller, and the original box if you have it. The box alone can add $10 to $20 to your asking price.',
+    },
+  ]}
+>
+  <p>
+    Selling a used PS5 is mostly about doing three things in order: protecting
+    your account, pricing it right, and picking a place to sell that will not
+    get you scammed. Get those three right and a clean disc model should pull
+    $300 to $400 in the current market. Here is the full process, step by step.
+  </p>
+
+  <h2>Step 1: back up your saves</h2>
+
+  <p>
+    Your save data is the one thing you cannot get back after a reset. If you
+    have PlayStation Plus, your saves are already syncing to the cloud. Check
+    Settings, then Saved Data, to confirm the latest uploads went through. If
+    you do not have Plus, copy your saves to a USB drive. Do this before
+    anything else, because the reset in the next step deletes everything
+    locally.
+  </p>
+
+  <h2>Step 2: deactivate and factory reset</h2>
+
+  <p>
+    Go to Settings, Users and Accounts, Other, then Console Sharing and Offline
+    Play, and disable it. That removes the console as your primary device so
+    the new owner cannot access your purchases. Then go to Settings, System,
+    Reset Options, and choose Reset Your Console. This wipes your account and
+    all data and returns the PS5 to the out-of-box setup screen.
+  </p>
+
+  <p>
+    Sign out of your account on any related apps too, like the PlayStation App
+    linked to the console. It is an easy step to forget, but leaving a device
+    linked to your account is the most common way people get locked out later.
+  </p>
+
+  <h2>Step 3: clean it and gather the extras</h2>
+
+  <p>
+    A clean console sells faster and for more than a dusty one. Wipe the body
+    with a dry or barely damp cloth, blow out the vents with canned air, and
+    clean the controller, especially the grips and the gap around the sticks.
+    Gather the HDMI cable, power cable, at least one controller, and the
+    original box if you still have it. The box alone signals to buyers that the
+    console was cared for, and it genuinely bumps the price.
+  </p>
+
+  <h2>Step 4: price it to sell</h2>
+
+  <p>
+    Check what similar consoles have actually sold for before you set a number.
+    On eBay, search sold listings rather than active ones, because asking
+    prices are not selling prices. In mid-2026 a disc PS5 in good condition with
+    one controller and the box realistically sells for about $350 on a good
+    day, and digital models about $40 to $60 less. If you include games, add
+    their used value on top. Price slightly under the sold average if you want
+    it gone in a week.
+  </p>
+
+  <h2>Step 5: choose where to sell</h2>
+
+  <p>
+    Facebook Marketplace usually gets the highest net price because there are
+    no platform fees, but it means meeting strangers and dealing with
+    lowballers. eBay reaches more buyers and has seller protections, but takes
+    a cut. Swappa is a good middle ground for tech, with lower fees than eBay
+    and a gamer-focused audience. GameStop trade-in is the floor: fast and safe,
+    but it pays noticeably less than any private sale.
+  </p>
+
+  <p>
+    Whichever you pick, take clear photos in good light, show the console
+    powered on with the home screen visible, and describe any scratches
+    honestly. A listing with a photo of the console actually running sells
+    faster and returns fewer complaints.
+  </p>
+
+  <h2>When a trade-in is the better move</h2>
+
+  <p>
+    Skip the private sale if your console has a fault, like a noisy fan or a
+    drifting controller, that you would rather not disclose in detail. A
+    trade-in service will still take it, and you avoid the risk of a buyer
+    disputing the sale later. Skip it too if you need the money same day. The
+    private route earns more, but it can take a week or two, and the extra $50
+    to $100 is not worth the wait when you are in a hurry.
+  </p>
+</ArticleLayout>

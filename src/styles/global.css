@@ -1,0 +1,304 @@
+/* ==========================================================================
+   Gearky — Global Styles & Design Tokens
+   ========================================================================== */
+
+/* ------------------------------------------------------------------ Tokens */
+:root {
+  /* Colors */
+  --color-primary: #155eef;
+  --color-primary-hover: #0f4cd3;
+  --color-primary-soft: #eef4ff;
+
+  --color-accent: #ff9900;
+  --color-accent-hover: #e68a00;
+
+  --color-background: #ffffff;
+  --color-surface: #f6f8fc;
+  --color-surface-2: #eef2fa;
+  --color-text: #101828;
+  --color-text-muted: #475467;
+  --color-text-faint: #98a2b3;
+  --color-border: #e4e7ec;
+
+  --color-dark: #0b1220;
+  --color-dark-2: #111a2e;
+  --color-on-dark: #f2f4f8;
+  --color-on-dark-muted: #98a2b3;
+
+  /* Typography */
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-heading: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', 'Menlo', monospace;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* Layout */
+  --max-width: 1200px;
+  --max-width-prose: 720px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-sm: 6px;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08);
+  --shadow-lg: 0 12px 32px rgba(16, 24, 40, 0.12);
+
+  /* Motion */
+  --transition-fast: 140ms ease;
+  --transition-base: 220ms ease;
+}
+
+/* ------------------------------------------------------------------ Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text);
+  background: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* ------------------------------------------------------------ Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+}
+h3 {
+  font-size: 1.3rem;
+}
+h4 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin-bottom: var(--space-4);
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------- Layout */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.container--narrow {
+  max-width: 880px;
+}
+
+.section {
+  padding-block: var(--space-12);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+/* --------------------------------------------------------------- Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+  color: #fff;
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: #0b1220;
+}
+.btn-accent:hover {
+  background: var(--color-accent-hover);
+  color: #0b1220;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-ghost:hover {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-hover);
+}
+
+.btn-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.875rem;
+}
+
+/* ---------------------------------------------------------------- Cards */
+.card {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ----------------------------------------------------------- Prose (articles) */
+.prose {
+  max-width: var(--max-width-prose);
+  font-size: 1.0625rem;
+  color: var(--color-text);
+}
+.prose > * + * {
+  margin-top: var(--space-4);
+}
+.prose h2 {
+  margin-top: var(--space-10);
+  scroll-margin-top: 96px;
+}
+.prose h3 {
+  margin-top: var(--space-8);
+  scroll-margin-top: 96px;
+}
+.prose ul,
+.prose ol {
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+.prose li {
+  margin-bottom: var(--space-2);
+}
+.prose blockquote {
+  border-left: 4px solid var(--color-primary);
+  background: var(--color-surface);
+  padding: var(--space-4) var(--space-5);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+.prose img {
+  border-radius: var(--radius);
+}
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin-block: var(--space-8);
+}
+
+/* -------------------------------------------------------------- Utilities */
+.text-muted {
+  color: var(--color-text-muted);
+}
+.text-small {
+  font-size: 0.875rem;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ----------------------------------------------------------- Focus rings */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

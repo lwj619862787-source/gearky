@@ -1,0 +1,20 @@
+{
+  "name": "gearky",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Gearky — PlayStation accessories, storage upgrades, and console guides.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.3.0",
+    "astro": "^5.7.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^5.9.3"
+  }
+}

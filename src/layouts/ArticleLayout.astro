@@ -1,0 +1,421 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+import { site, getCategory, affiliate, authors } from '../data/site';
+import { typeLabel } from '../types/article';
+import type { ArticleMeta, Post } from '../types/article';
+
+interface Props {
+  meta: ArticleMeta;
+  pros?: string[];
+  cons?: string[];
+  faqs?: { q: string; a: string }[];
+  related?: Post[];
+}
+
+const { meta, pros = [], cons = [], faqs = [], related = [] } = Astro.props;
+
+const cat = getCategory(meta.category);
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const toIso = (d: string) => (d.includes('T') ? d : `${d}T00:00:00Z`);
+const datePublished = toIso(meta.date);
+const dateModified = toIso(meta.updated || meta.date);
+
+const prettyDate = new Date(meta.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+const prettyUpdated = new Date(dateModified).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const author = meta.author || site.author;
+const authorInfo = authors[author];
+
+const bodyHtml = (await Astro.slots.render('default')) ?? '';
+const wordCount = bodyHtml
+  .replace(/<[^>]+>/g, ' ')
+  .replace(/\s+/g, ' ')
+  .trim()
+  .split(' ')
+  .filter(Boolean).length;
+
+// Generic affiliate link — points to whatever merchant URL the article provides.
+const affiliateUrl = meta.affiliateUrl || null;
+
+// --- JSON-LD schemas ---
+const breadcrumb = {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: site.url },
+    { '@type': 'ListItem', position: 2, name: cat?.label ?? 'Guides', item: `${site.url}/${meta.category}/` },
+    { '@type': 'ListItem', position: 3, name: meta.title },
+  ],
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: meta.title,
+  description: meta.description,
+  image: meta.image ? new URL(meta.image, site.url).href : `${site.url}/images/og-default.svg`,
+  datePublished,
+  dateModified,
+  wordCount,
+  author: {
+    '@type': 'Person',
+    name: author,
+    ...(meta.authorBio ? { description: meta.authorBio } : {}),
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: site.name,
+    logo: { '@type': 'ImageObject', url: `${site.url}/favicon.svg` },
+  },
+  mainEntityOfPage: canonical,
+};
+
+const schemas: Record<string, unknown>[] = [
+  { '@context': 'https://schema.org', ...breadcrumb },
+  articleSchema,
+];
+
+if (meta.price != null) {
+  const product: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: meta.title,
+    description: meta.description,
+    image: meta.image ? new URL(meta.image, site.url).href : `${site.url}/images/og-default.svg`,
+    offers: {
+      '@type': 'Offer',
+      price: meta.price,
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      ...(affiliateUrl ? { url: affiliateUrl } : {}),
+    },
+  };
+  if (meta.rating) {
+    product.review = {
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: meta.rating, bestRating: 5 },
+      author: {
+        '@type': 'Person',
+        name: author,
+        ...(meta.authorBio ? { description: meta.authorBio } : {}),
+      },
+    };
+  }
+  schemas.push(product);
+}
+
+if (faqs.length > 0) {
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  });
+}
+---
+
+<BaseLayout
+  title={meta.title}
+  description={meta.description}
+  canonicalUrl={canonical}
+  image={meta.image}
+  type="article"
+>
+  {schemas.map((s) => <SchemaMarkup schema={s} />)}
+
+  <article>
+    <header class="article-header">
+      <div class="container container--narrow">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href={`/${meta.category}/`}>{cat?.label}</a>
+          <span aria-hidden="true">/</span>
+          <span class="current">{typeLabel[meta.type] ?? 'Article'}</span>
+        </nav>
+
+        <h1 class="article-title">{meta.title}</h1>
+
+        <div class="article-meta">
+          {meta.rating && (
+            <span class="rating" aria-label={`Rated ${meta.rating} out of 5`}>
+              <span class="stars" aria-hidden="true">{'★'.repeat(Math.round(meta.rating))}</span>
+              <strong>{meta.rating}</strong>/5
+            </span>
+          )}
+          <span class="byline">
+            By {authorInfo ? <a href={`/author/${authorInfo.slug}/`}>{author}</a> : author}
+          </span>
+          <span class="date">
+            Updated {prettyUpdated === prettyDate ? prettyDate : prettyUpdated}
+          </span>
+        </div>
+      </div>
+    </header>
+
+    {meta.image && (
+      <div class="container container--narrow">
+        <img class="hero-image" src={meta.image} alt={meta.title} width="1200" height="630" />
+      </div>
+    )}
+
+    <div class="container container--narrow article-body">
+      <aside class="disclosure">
+        <strong>Disclosure:</strong> Gearky is reader-supported. When you buy through
+        links on our site, we may earn an affiliate commission. <a href="/disclosure/">Learn more</a>.
+      </aside>
+
+      <div class="prose">
+        <slot />
+      </div>
+
+      {affiliateUrl && (
+        <div class="cta-box">
+          <p class="cta-label">Best price we found</p>
+          <a class="btn btn-accent cta-btn" href={affiliateUrl} target="_blank" rel="nofollow noopener sponsored">
+            {affiliate.ctaText}
+          </a>
+          <p class="cta-note">We may earn a commission if you buy through this link.</p>
+        </div>
+      )}
+
+      {(pros.length > 0 || cons.length > 0) && (
+        <div class="proscons">
+          {pros.length > 0 && (
+            <div class="pros">
+              <h2>What we like</h2>
+              <ul>
+                {pros.map((p) => (
+                  <li>{p}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {cons.length > 0 && (
+            <div class="cons">
+              <h2>What to consider</h2>
+              <ul>
+                {cons.map((c) => (
+                  <li>{c}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+
+      {faqs.length > 0 && (
+        <section class="faqs">
+          <h2>Frequently asked questions</h2>
+          {faqs.map((f) => (
+            <details class="faq">
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </section>
+      )}
+
+      {related.length > 0 && (
+        <section class="related">
+          <h2>Related guides</h2>
+          <ul>
+            {related.map((p) => (
+              <li>
+                <a href={`/${p.category}/${p.slug}/`}>{p.title}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-header {
+    padding-block: var(--space-8) var(--space-6);
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-5);
+  }
+  .breadcrumbs .current {
+    color: var(--color-text-faint);
+  }
+
+  .article-title {
+    margin-bottom: var(--space-4);
+  }
+
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4);
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+  .rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .stars {
+    color: var(--color-accent);
+    letter-spacing: 1px;
+  }
+
+  .hero-image {
+    margin-top: var(--space-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+  }
+
+  .article-body {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-16);
+  }
+
+  .disclosure {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-3) var(--space-4);
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-8);
+  }
+
+  .cta-box {
+    margin-top: var(--space-8);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    text-align: center;
+  }
+  .cta-label {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-2);
+  }
+  .cta-btn {
+    font-size: 1.05rem;
+    padding: var(--space-3) var(--space-8);
+  }
+  .cta-note {
+    margin-top: var(--space-3);
+    font-size: 0.78rem;
+    color: var(--color-text-faint);
+  }
+
+  .proscons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    margin-top: var(--space-10);
+  }
+  .pros,
+  .cons {
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+  }
+  .pros {
+    background: #f0faf1;
+    border-color: #d3ead6;
+  }
+  .cons {
+    background: #fdf3f2;
+    border-color: #f3d5d2;
+  }
+  .pros h2,
+  .cons h2 {
+    font-size: 1.05rem;
+    margin-bottom: var(--space-3);
+  }
+  .pros ul,
+  .cons ul {
+    padding-left: var(--space-5);
+  }
+  .pros li,
+  .cons li {
+    margin-bottom: var(--space-2);
+    font-size: 0.95rem;
+  }
+
+  .faqs {
+    margin-top: var(--space-10);
+  }
+  .faqs h2 {
+    margin-bottom: var(--space-5);
+  }
+  .faq {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-3);
+    overflow: hidden;
+  }
+  .faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: var(--space-4);
+    background: var(--color-surface);
+  }
+  .faq p {
+    padding: var(--space-4);
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+
+  .related {
+    margin-top: var(--space-10);
+  }
+  .related h2 {
+    margin-bottom: var(--space-4);
+  }
+  .related ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+  }
+  .related li {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-4);
+    background: var(--color-surface);
+  }
+  .related a {
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    .proscons {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

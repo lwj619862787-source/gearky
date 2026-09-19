@@ -1,0 +1,160 @@
+---
+import { site, categories } from '../data/site';
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" aria-label={`${site.name} home`}>
+          <span class="logo-mark">G</span>
+          <span class="logo-text">gearky</span>
+        </a>
+        <p class="footer-tagline">{site.tagline}</p>
+        <p class="footer-disclosure">
+          Gearky is reader-supported and may earn a commission when you buy through
+          links on our site. Read our full <a href="/disclosure/">affiliate disclosure</a>.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Guides</h3>
+        <ul>
+          {
+            categories.map((c) => (
+              <li>
+                <a href={`/${c.slug}/`}>{c.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Company</h3>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/disclosure/">Affiliate Disclosure</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Legal</h3>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+      <p class="footer-note">
+        Gearky is an independent site and is not affiliated with, endorsed by, or
+        sponsored by Sony Interactive Entertainment. All product names and trademarks
+        are property of their respective owners.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-dark);
+    color: var(--color-on-dark-muted);
+    padding-block: var(--space-16) var(--space-8);
+    margin-top: var(--space-16);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-10);
+    margin-bottom: var(--space-10);
+  }
+
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--color-on-dark);
+  }
+  .logo:hover {
+    color: #fff;
+  }
+  .logo-mark {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius-sm);
+    background: var(--color-primary);
+    color: #fff;
+    font-weight: 800;
+  }
+
+  .footer-tagline {
+    margin-top: var(--space-3);
+    color: var(--color-on-dark-muted);
+    font-size: 0.95rem;
+  }
+
+  .footer-disclosure {
+    margin-top: var(--space-3);
+    font-size: 0.8rem;
+    color: var(--color-on-dark-muted);
+    max-width: 36ch;
+  }
+  .footer-disclosure a {
+    color: #c7d7ff;
+    text-decoration: underline;
+  }
+
+  .footer-heading {
+    color: var(--color-on-dark);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-3);
+  }
+
+  .footer-col ul {
+    list-style: none;
+  }
+  .footer-col li {
+    margin-bottom: var(--space-2);
+  }
+  .footer-col a {
+    color: var(--color-on-dark-muted);
+    font-size: 0.95rem;
+  }
+  .footer-col a:hover {
+    color: #fff;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: var(--space-6);
+    font-size: 0.85rem;
+    color: var(--color-on-dark-muted);
+  }
+  .footer-note {
+    margin-top: var(--space-3);
+    font-size: 0.78rem;
+    color: rgba(152, 162, 179, 0.7);
+    max-width: 70ch;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+    }
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

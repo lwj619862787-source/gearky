@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gearky.com/sitemap-index.xml

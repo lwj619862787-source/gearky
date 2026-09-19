@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import Card from '../../components/Card.astro';
+import { site, authors } from '../../data/site';
+import { collectPosts } from '../../lib/posts';
+
+const author = authors['Lucas Hart'];
+const posts = collectPosts(import.meta.glob('../*/*.astro', { eager: true })).filter(
+  (p) => p.author === author.name
+);
+
+const authorUrl = new URL(`/author/${author.slug}/`, site.url).href;
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: author.name,
+  jobTitle: author.role,
+  description: author.bio,
+  url: authorUrl,
+};
+---
+
+<BaseLayout
+  title={author.name}
+  description={`${author.name} — ${author.bio}`}
+  canonicalUrl={authorUrl}
+>
+  <SchemaMarkup schema={personSchema} />
+
+  <section class="page">
+    <div class="container container--narrow">
+      <div class="author-head">
+        <h1>{author.name}</h1>
+        <p class="role">{author.role}</p>
+        <p class="bio">{author.bio}</p>
+      </div>
+
+      <h2>Guides by {author.name}</h2>
+      <div class="post-grid">
+        {posts.map((p) => (
+          <Card post={p} />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: var(--space-12);
+  }
+  .author-head {
+    margin-bottom: var(--space-10);
+  }
+  .role {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .bio {
+    color: var(--color-text-muted);
+    max-width: 60ch;
+  }
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+  @media (max-width: 900px) {
+    .post-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 560px) {
+    .post-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

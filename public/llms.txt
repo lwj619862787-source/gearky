@@ -1,0 +1,23 @@
+# Gearky
+
+> Gearky is an independent buyer's guide for PlayStation accessories, storage upgrades, console decisions, and deals. Honest reviews tested by real players.
+
+## About
+
+Gearky publishes hands-on reviews and buying guides for PS5 and PS4 controllers, accessories, SSD storage upgrades, console skins and the used market, plus discount codes and game recommendations. We are reader-supported through affiliate commissions (Amazon Associates) and are not affiliated with Sony Interactive Entertainment.
+
+## Key Pages
+
+- Home: https://gearky.com
+- Controllers & Accessories: https://gearky.com/controllers/
+- SSD & Storage Upgrades: https://gearky.com/storage/
+- Console, Skins & Used: https://gearky.com/console/
+- Deals & Game Guides: https://gearky.com/deals/
+
+## Company
+
+- About: https://gearky.com/about/
+- Contact: https://gearky.com/contact/
+- Affiliate Disclosure: https://gearky.com/disclosure/
+- Privacy Policy: https://gearky.com/privacy-policy/
+- Terms of Use: https://gearky.com/terms/

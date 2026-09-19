@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description={`Privacy policy for ${site.name}.`}
+  noindex
+>
+  <section class="page">
+    <div class="container container--narrow">
+      <h1>Privacy Policy</h1>
+      <div class="prose">
+        <p>Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        <p>
+          This Privacy Policy explains how Gearky ("we", "us", "our") collects, uses, and
+          protects information when you visit {site.domain}.
+        </p>
+        <h2>Information we collect</h2>
+        <ul>
+          <li>
+            <strong>Usage data</strong> — We may use privacy-friendly analytics to
+            understand aggregate traffic and popular pages. No cookies are required for
+            this unless you opt in.
+          </li>
+          <li>
+            <strong>Contact information</strong> — If you email us, we receive your email
+            address and message content.
+          </li>
+        </ul>
+        <h2>Cookies &amp; third parties</h2>
+        <p>
+          Our site may link to third-party retailers (such as Amazon). Clicking an
+          affiliate link may set cookies managed by those third parties, subject to their
+          own privacy policies. We do not control these cookies.
+        </p>
+        <h2>How we use information</h2>
+        <ul>
+          <li>To improve our content and website experience.</li>
+          <li>To respond to your inquiries.</li>
+        </ul>
+        <p>We do not sell your personal information.</p>
+        <h2>Your rights</h2>
+        <p>
+          Depending on your location (including the EEA and California), you may have
+          rights to access, correct, or delete personal data. To exercise these rights,
+          please <a href="/contact/">contact us</a>.
+        </p>
+        <h2>Contact</h2>
+        <p>
+          Questions about this policy? Email{' '}
+          <a href={`mailto:${site.email}`}>{site.email}</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: var(--space-12);
+  }
+</style>

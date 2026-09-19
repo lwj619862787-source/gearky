@@ -1,0 +1,134 @@
+---
+import type { Post } from '../types/article';
+import { typeLabel } from '../types/article';
+import { getCategory } from '../data/site';
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const cat = getCategory(post.category);
+const label = typeLabel[post.type] ?? 'Article';
+const date = new Date(post.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+const href = `/${post.category}/${post.slug}/`;
+---
+
+<a href={href} class="card-link">
+  <article class="card">
+    <div class="card-media">
+      <img
+        src={post.image || '/images/placeholder.svg'}
+        alt=""
+        loading="lazy"
+        width="400"
+        height="225"
+      />
+      <span class="card-type">{label}</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-category">{cat?.label}</span>
+        <span class="card-date">{date}</span>
+      </div>
+      <h3 class="card-title">{post.title}</h3>
+      <p class="card-desc">{post.description}</p>
+    </div>
+  </article>
+</a>
+
+<style>
+  .card-link {
+    display: block;
+    color: inherit;
+  }
+  .card-link:hover {
+    color: inherit;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+  .card-link:hover .card {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .card-media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--color-surface-2);
+    overflow: hidden;
+  }
+  .card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-type {
+    position: absolute;
+    top: var(--space-3);
+    left: var(--space-3);
+    background: rgba(11, 18, 32, 0.78);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
+  }
+
+  .card-body {
+    padding: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    flex: 1;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: 0.78rem;
+  }
+  .card-category {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .card-date {
+    color: var(--color-text-faint);
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    line-height: 1.35;
+  }
+  .card-link:hover .card-title {
+    color: var(--color-primary);
+  }
+
+  .card-desc {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

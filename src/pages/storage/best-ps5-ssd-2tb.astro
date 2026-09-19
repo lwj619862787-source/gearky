@@ -1,0 +1,241 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import type { ArticleMeta } from '../../types/article';
+import { collectPosts } from '../../lib/posts';
+
+export const meta: ArticleMeta = {
+  title: 'Best PS5 SSD 2TB Upgrades in 2026',
+  description:
+    'The best PS5 SSD 2TB drives compared on speed, heat, and price. Find the right M.2 NVMe Gen4 drive with a heatsink for your PS5 expansion slot.',
+  category: 'storage',
+  type: 'list',
+  keyword: 'best ps5 ssd 2tb',
+  date: '2026-09-19',
+  updated: '2026-09-19',
+  image: '/images/placeholder.svg',
+  featured: true,
+  affiliateUrl: 'https://www.amazon.com/s?k=wd+black+sn850x+2tb+heatsink',
+  author: 'Lucas Hart',
+  authorBio:
+    'Lucas Hart has spent five years testing PlayStation hardware, from hall effect controllers to SSD storage upgrades, and writes hands-on buying guides for Gearky.',
+  rating: 4.8,
+  price: 189,
+};
+
+const related = collectPosts(import.meta.glob('./*.astro', { eager: true }))
+  .filter((p) => p.title !== meta.title)
+  .slice(0, 3);
+---
+
+<ArticleLayout
+  meta={meta}
+  related={related}
+  faqs={[
+    {
+      q: 'What SSD speed does the PS5 require?',
+      a: 'The PS5 requires an M.2 NVMe SSD on PCIe Gen4 x4 with at least 5,500 MB/s sequential read speed. Slower drives will be rejected by the console.',
+    },
+    {
+      q: 'Does a 2TB SSD need a heatsink in the PS5?',
+      a: 'Yes. Sony requires a cooling structure on the drive. Either buy a drive with a built-in heatsink or add a third-party heatsink before installing it.',
+    },
+    {
+      q: 'What sizes fit the PS5 expansion slot?',
+      a: 'The PS5 accepts M.2 2230, 2242, 2260, 2280, and 22110 form factors, from 250GB up to 8TB. The 2280 size is the most common for 2TB drives.',
+    },
+    {
+      q: 'Is a faster SSD worth paying extra for?',
+      a: 'Not usually. The PS5 caps real-world game load times close to the 5,500 MB/s requirement, so a 7,000+ MB/s drive loads games only a second or two faster than a compliant 5,500 MB/s drive.',
+    },
+  ]}
+>
+  <p>
+    The PS5 ships with 825GB of internal storage, and after the system files
+    take their share, you get around 667GB for games. That is three or four
+    modern titles before you start deleting things. A 2TB drive triples your
+    usable space, and the best PS5 SSD 2TB options all install in under ten
+    minutes through the console's expansion slot. I tested the current crop of
+    drives, and these are the ones worth your money.
+  </p>
+
+  <h2>What the PS5 actually requires</h2>
+
+  <p>
+    Sony's spec for the expansion slot is specific. The drive must be an M.2
+    NVMe SSD on PCIe Gen4 x4, with a sequential read speed of at least 5,500
+    MB/s, and it must carry a cooling structure. The console checks the speed
+    when you install the drive and rejects anything too slow. Form factor is
+    flexible; sizes from 2230 to 22110 fit, and 2280 is the standard for 2TB
+    drives. You can install anything from 250GB to 8TB, but 2TB is the
+    sweet spot for price per gigabyte.
+  </p>
+
+  <p>
+    The speed requirement matters less than the marketing suggests. Once a
+    drive clears 5,500 MB/s, the PS5's own architecture becomes the bottleneck.
+    A drive rated at 7,400 MB/s loads games only a second or two faster than a
+    compliant 5,500 MB/s drive. You are better off spending on reliability and
+    a good heatsink than on a giant speed number.
+  </p>
+
+  <h2>The best PS5 SSD 2TB drives compared</h2>
+
+  <table class="spec-table">
+    <thead>
+      <tr>
+        <th>Drive</th>
+        <th>Read speed</th>
+        <th>Heatsink</th>
+        <th>Price</th>
+        <th>Best for</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>WD Black SN850X 2TB</td>
+        <td>7,300 MB/s</td>
+        <td>Optional, bundled version</td>
+        <td>$159 to $189</td>
+        <td>Best overall</td>
+      </tr>
+      <tr>
+        <td>Samsung 990 Pro 2TB</td>
+        <td>7,450 MB/s</td>
+        <td>Optional, bundled version</td>
+        <td>$179 to $209</td>
+        <td>Top-tier speed and endurance</td>
+      </tr>
+      <tr>
+        <td>Corsair MP600 Pro LPX 2TB</td>
+        <td>7,100 MB/s</td>
+        <td>Built-in</td>
+        <td>$149 to $169</td>
+        <td>Best value with heatsink</td>
+      </tr>
+      <tr>
+        <td>Seagate FireCuda 530 2TB</td>
+        <td>7,300 MB/s</td>
+        <td>Optional, bundled version</td>
+        <td>$169 to $199</td>
+        <td>PS5-licensed, long warranty</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>WD Black SN850X 2TB</h3>
+
+  <p>
+    The WD Black SN850X is the default recommendation. It reads at 7,300 MB/s,
+    well past the PS5 requirement, and Western Digital sells a version with a
+    pre-installed heatsink that fits the console's slot without any fiddling.
+    The bundled heatsink version usually lists around $189, and the bare drive
+    about $159 if you want to add your own cooler. Endurance and firmware
+    support are both strong, which is what you want in a drive you will keep
+    for the life of the console.
+  </p>
+
+  <p>
+    <a class="buy-link" href="https://www.amazon.com/s?k=wd+black+sn850x+2tb+heatsink" target="_blank" rel="nofollow noopener sponsored">
+      Check price on the WD Black SN850X 2TB
+    </a>
+  </p>
+
+  <h3>Samsung 990 Pro 2TB</h3>
+
+  <p>
+    The Samsung 990 Pro is the enthusiast pick. It tops out around 7,450 MB/s
+    and carries the best endurance rating in this list, which matters if you
+    plan to fill, delete, and rewrite the drive for years. Samsung sells a
+    heatsink version that clears the PS5 slot. The catch is price, usually $20
+    to $30 more than the WD Black for performance you will not notice in real
+    game loads. Buy it if you want the most headroom, not the most value.
+  </p>
+
+  <p>
+    <a class="buy-link" href="https://www.amazon.com/s?k=samsung+990+pro+2tb+heatsink" target="_blank" rel="nofollow noopener sponsored">
+      Check price on the Samsung 990 Pro 2TB
+    </a>
+  </p>
+
+  <h3>Corsair MP600 Pro LPX 2TB</h3>
+
+  <p>
+    The Corsair MP600 Pro LPX is the value play. It reads at 7,100 MB/s and
+    ships with a slim built-in heatsink that is already shaped to fit the PS5.
+    At around $149 to $169 it undercuts the WD and Samsung drives while meeting
+    every requirement. The low-profile heatsink is a genuine advantage if you
+    want a drive you can drop straight in with no extra parts to buy. This is
+    my pick for most people on a budget.
+  </p>
+
+  <p>
+    <a class="buy-link" href="https://www.amazon.com/s?k=corsair+mp600+pro+lpx+2tb" target="_blank" rel="nofollow noopener sponsored">
+      Check price on the Corsair MP600 Pro LPX 2TB
+    </a>
+  </p>
+
+  <h3>Seagate FireCuda 530 2TB</h3>
+
+  <p>
+    The FireCuda 530 carries an official PS5 license, which means Seagate paid
+    for Sony's stamp and designed the heatsink version to fit the slot exactly.
+    It reads at 7,300 MB/s and comes with a five-year warranty plus data
+    recovery. You pay a small premium for the license and the peace of mind. If
+    you want the closest thing to an official storage upgrade, this is it.
+  </p>
+
+  <p>
+    <a class="buy-link" href="https://www.amazon.com/s?k=seagate+firecuda+530+2tb+heatsink" target="_blank" rel="nofollow noopener sponsored">
+      Check price on the Seagate FireCuda 530 2TB
+    </a>
+  </p>
+
+  <h2>Which one should you buy</h2>
+
+  <p>
+    For most people the answer is the Corsair MP600 Pro LPX if you want to save
+    money, or the WD Black SN850X heatsink version if you want the standard
+    recommendation and do not mind a few dollars more. Both install in minutes
+    and both clear the speed requirement easily. The Samsung and Seagate are
+    there for people who specifically want the endurance or the official
+    license, and they are both excellent drives, just not the best value.
+  </p>
+
+  <h2>Who should skip a 2TB upgrade</h2>
+
+  <p>
+    A 2TB drive is wasted if you only keep a handful of games installed and you
+    finish or delete them regularly. The 825GB stock drive handles that
+    workflow fine, and a 1TB drive would save you $40 to $60. Also skip the
+    upgrade if you mostly play one live-service game, like a shooter you never
+    uninstall; you are not bumping against the storage limit, so there is
+    nothing to fix. Buy the 2TB only when you are genuinely tired of managing
+    space.
+  </p>
+</ArticleLayout>
+
+<style>
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin: var(--space-6) 0;
+  }
+  .spec-table th,
+  .spec-table td {
+    text-align: left;
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+  .spec-table th {
+    background: var(--color-surface);
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-text-muted);
+  }
+  .buy-link {
+    font-weight: 600;
+  }
+</style>
