@@ -1,7 +1,10 @@
+const siteUrl =
+  (import.meta.env.PUBLIC_SITE_URL as string | undefined) || 'https://gearky.pages.dev';
+
 export const site = {
   name: 'Gearky',
-  domain: 'gearky.pages.dev',
-  url: 'https://gearky.pages.dev',
+  domain: siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, ''),
+  url: siteUrl,
   tagline: 'PlayStation gear, storage & console guides',
   description:
     'Gearky is an independent buyer\'s guide covering PlayStation controllers, accessories, SSD storage upgrades, console buying, and deals.',

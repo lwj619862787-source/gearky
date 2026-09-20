@@ -1,8 +1,11 @@
 import { defineConfig } from 'astro/config';
+import { loadEnv } from 'vite';
 import sitemap from '@astrojs/sitemap';
 
+const { PUBLIC_SITE_URL } = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), '');
+
 export default defineConfig({
-  site: 'https://gearky.pages.dev',
+  site: PUBLIC_SITE_URL || 'https://gearky.pages.dev',
   integrations: [sitemap()],
   markdown: {
     shikiConfig: {

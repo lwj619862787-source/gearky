@@ -65,6 +65,15 @@ The `meta` fields:
 - Categories (labels + descriptions): `src/data/site.ts`
 - Design tokens (colors, fonts, spacing): `src/styles/global.css`
 
+The site base URL (used for sitemap, canonical, and JSON-LD) is read from the
+`PUBLIC_SITE_URL` environment variable, defaulting to `https://gearky.pages.dev`.
+Copy `.env.example` to `.env` and set your domain, or set the variable in your
+host's build settings:
+
+```bash
+PUBLIC_SITE_URL=https://gearky.com
+```
+
 ## SEO / GEO
 
 - `public/robots.txt` — sitemap reference
