@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gearky.com/sitemap-index.xml
+Sitemap: https://gearky.pages.dev/sitemap-index.xml

@@ -32,7 +32,7 @@ the right folder auto-lists it on the homepage and its category page.
    src/pages/controllers/<your-slug>.astro
    ```
 2. Rename the file to a URL-safe slug (lowercase + hyphens). The URL becomes
-   `https://gearky.com/controllers/<your-slug>/`.
+   `https://gearky.pages.dev/controllers/<your-slug>/`.
 3. Edit the `meta` object (title, description, category, type, keyword, date, rating, affiliateUrl…).
 4. Write your article body inside `<ArticleLayout>`.
 

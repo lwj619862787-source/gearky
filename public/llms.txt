@@ -8,16 +8,16 @@ Gearky publishes hands-on reviews and buying guides for PS5 and PS4 controllers,
 
 ## Key Pages
 
-- Home: https://gearky.com
-- Controllers & Accessories: https://gearky.com/controllers/
-- SSD & Storage Upgrades: https://gearky.com/storage/
-- Console, Skins & Used: https://gearky.com/console/
-- Deals & Game Guides: https://gearky.com/deals/
+- Home: https://gearky.pages.dev
+- Controllers & Accessories: https://gearky.pages.dev/controllers/
+- SSD & Storage Upgrades: https://gearky.pages.dev/storage/
+- Console, Skins & Used: https://gearky.pages.dev/console/
+- Deals & Game Guides: https://gearky.pages.dev/deals/
 
 ## Company
 
-- About: https://gearky.com/about/
-- Contact: https://gearky.com/contact/
-- Affiliate Disclosure: https://gearky.com/disclosure/
-- Privacy Policy: https://gearky.com/privacy-policy/
-- Terms of Use: https://gearky.com/terms/
+- About: https://gearky.pages.dev/about/
+- Contact: https://gearky.pages.dev/contact/
+- Affiliate Disclosure: https://gearky.pages.dev/disclosure/
+- Privacy Policy: https://gearky.pages.dev/privacy-policy/
+- Terms of Use: https://gearky.pages.dev/terms/

@@ -1,7 +1,7 @@
 export const site = {
   name: 'Gearky',
-  domain: 'gearky.com',
-  url: 'https://gearky.com',
+  domain: 'gearky.pages.dev',
+  url: 'https://gearky.pages.dev',
   tagline: 'PlayStation gear, storage & console guides',
   description:
     'Gearky is an independent buyer\'s guide covering PlayStation controllers, accessories, SSD storage upgrades, console buying, and deals.',
