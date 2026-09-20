@@ -16,13 +16,15 @@ const date = new Date(post.date).toLocaleDateString('en-US', {
   day: 'numeric',
 });
 const href = `/${post.category}/${post.slug}/`;
+const coverSrc =
+  post.image && !post.image.includes('placeholder') ? post.image : `/og/${post.slug}.svg`;
 ---
 
 <a href={href} class="card-link">
   <article class="card">
     <div class="card-media">
       <img
-        src={post.image || '/images/placeholder.svg'}
+        src={coverSrc}
         alt=""
         loading="lazy"
         width="400"

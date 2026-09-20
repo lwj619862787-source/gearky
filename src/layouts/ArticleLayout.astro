@@ -35,6 +35,13 @@ const prettyUpdated = new Date(dateModified).toLocaleDateString('en-US', {
 const author = meta.author || site.author;
 const authorInfo = authors[author];
 
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const slug = pathSegments[pathSegments.length - 1] ?? '';
+const heroImage =
+  meta.image && !meta.image.includes('placeholder')
+    ? meta.image
+    : `/og/${slug}.svg`;
+
 const bodyHtml = (await Astro.slots.render('default')) ?? '';
 const wordCount = bodyHtml
   .replace(/<[^>]+>/g, ' ')
@@ -129,7 +136,7 @@ if (faqs.length > 0) {
   title={meta.title}
   description={meta.description}
   canonicalUrl={canonical}
-  image={meta.image}
+  image={heroImage}
   type="article"
 >
   {schemas.map((s) => <SchemaMarkup schema={s} />)}
@@ -164,11 +171,9 @@ if (faqs.length > 0) {
       </div>
     </header>
 
-    {meta.image && (
-      <div class="container container--narrow">
-        <img class="hero-image" src={meta.image} alt={meta.title} width="1200" height="630" />
-      </div>
-    )}
+    <div class="container container--narrow">
+      <img class="hero-image" src={heroImage} alt={meta.title} width="1200" height="630" />
+    </div>
 
     <div class="container container--narrow article-body">
       <aside class="disclosure">
