@@ -105,12 +105,23 @@ export const meta: ArticleMeta = {
     </table>
   </div>
 
+  <figure class="article-figure">
+    <img
+      src="/images/used-ps5-price.svg"
+      alt="Used PS5 price tiers: Sony Certified Refurbished vs retail refurbished"
+      loading="lazy"
+      width="800"
+      height="450"
+    />
+    <figcaption>Sony Certified Refurbished starts at $519, while retail refurbished units run $300 to $380.</figcaption>
+  </figure>
+
   <p>
     One more thing worth knowing: the sub-$400 era is essentially over. Sony&apos;s original
     refurbished PS5 used to sell for $399, but that price has already climbed, and the
     Fortnite bundle — the last widely available new console below the current starting
     price — has sold out. New consoles now start at <strong>$599</strong> for the Digital Edition,
-    with the PS5 Pro at $899.99, which is exactly why the used market has firmed up
+    with the PS5 Pro at $899, which is exactly why the used market has firmed up
     instead of falling further.
   </p>
 
@@ -196,6 +207,18 @@ export const meta: ArticleMeta = {
     stock, and eBay or local sellers should only be your last resort, used when you can
     meet and test in person.
   </p>
+
+  <figure class="article-figure">
+    <img
+      src="/images/used-ps5-buy-path.svg"
+      alt="Recommended order for buying a used PS5, from PlayStation Direct to eBay"
+      loading="lazy"
+      width="800"
+      height="450"
+    />
+    <figcaption>Start with PlayStation Direct, fall back to Amazon Renewed, and treat peer-to-peer as a last resort.</figcaption>
+  </figure>
+
   <p>
     The through-line is the same no matter where you end up buying: you are paying a
     little more than the peer-to-peer price for the one thing that matters
@@ -320,5 +343,20 @@ export const meta: ArticleMeta = {
   }
   .checklist {
     list-style-type: decimal;
+  }
+  .article-figure {
+    margin: var(--space-6) 0;
+  }
+  .article-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+  }
+  .article-figure figcaption {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-2);
+    text-align: center;
   }
 </style>

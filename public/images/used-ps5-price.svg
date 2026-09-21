@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">Used PS5 price tiers</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">The two realistic tiers for consumer buyers</text>
+
+  <!-- Tier 1: Sony Certified Refurbished (highlighted) -->
+  <g>
+    <rect x="40" y="120" width="350" height="290" rx="16" fill="#155eef"/>
+    <text x="70" y="168" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">Sony Certified</text>
+    <text x="70" y="194" font-family="Inter, Arial, sans-serif" font-size="16" fill="#d6e4ff">Refurbished</text>
+    <text x="70" y="262" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800" fill="#ffffff">$519</text>
+    <text x="70" y="292" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">original (825GB disc)</text>
+    <text x="70" y="322" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff">$499–$549</text>
+    <text x="70" y="350" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">Slim Digital / Disc</text>
+    <text x="70" y="386" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff">12-month warranty</text>
+  </g>
+
+  <!-- Tier 2: Retail refurbished -->
+  <g>
+    <rect x="410" y="120" width="350" height="290" rx="16" fill="#132447"/>
+    <rect x="410" y="120" width="350" height="6" rx="3" fill="#2a4f9e"/>
+    <text x="440" y="168" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">Retail refurbished</text>
+    <text x="440" y="194" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">Amazon Renewed / GameStop</text>
+    <text x="440" y="262" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800" fill="#ffffff">$300–$380</text>
+    <text x="440" y="292" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">standard PS5, used</text>
+    <text x="440" y="322" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">most consumer buyers</text>
+    <text x="440" y="386" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Return window + short warranty</text>
+  </g>
+</svg>

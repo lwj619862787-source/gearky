@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">PS5 vs PS5 Pro — US pricing</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">List prices on PlayStation Direct, September 2026</text>
+
+  <!-- Card 1: PS5 Digital -->
+  <g>
+    <rect x="40" y="120" width="220" height="280" rx="16" fill="#132447"/>
+    <rect x="40" y="120" width="220" height="6" rx="3" fill="#2a4f9e"/>
+    <text x="66" y="168" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">PS5 Digital</text>
+    <text x="66" y="196" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">825GB SSD</text>
+    <text x="66" y="330" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800" fill="#ffffff">$599</text>
+    <text x="66" y="360" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">baseline</text>
+  </g>
+
+  <!-- Card 2: PS5 Disc -->
+  <g>
+    <rect x="290" y="120" width="220" height="280" rx="16" fill="#132447"/>
+    <rect x="290" y="120" width="220" height="6" rx="3" fill="#2a4f9e"/>
+    <text x="316" y="168" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">PS5 Disc</text>
+    <text x="316" y="196" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">1TB SSD + drive</text>
+    <text x="316" y="330" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800" fill="#ffffff">$649</text>
+    <text x="316" y="360" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">+$50 vs digital</text>
+  </g>
+
+  <!-- Card 3: PS5 Pro (highlighted) -->
+  <g>
+    <rect x="540" y="120" width="220" height="280" rx="16" fill="#155eef"/>
+    <rect x="540" y="120" width="220" height="6" rx="3" fill="#8fb3ff"/>
+    <text x="566" y="168" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">PS5 Pro</text>
+    <text x="566" y="196" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">2TB SSD, digital</text>
+    <text x="566" y="330" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800" fill="#ffffff">$899</text>
+    <text x="566" y="360" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">+$300 vs digital</text>
+  </g>
+</svg>

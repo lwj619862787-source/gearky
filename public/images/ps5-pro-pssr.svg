@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">How PSSR upscaling works</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">PlayStation Spectral Super Resolution</text>
+
+  <!-- Step 1 -->
+  <g>
+    <rect x="40" y="150" width="200" height="150" rx="14" fill="#132447"/>
+    <text x="140" y="205" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Lower resolution</text>
+    <text x="140" y="232" font-family="Inter, Arial, sans-serif" font-size="14" fill="#98a2b3" text-anchor="middle">render frame</text>
+    <text x="140" y="262" font-family="Inter, Arial, sans-serif" font-size="13" fill="#8fb3ff" text-anchor="middle">e.g. 1440p internal</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g>
+    <path d="M250 225 H280" stroke="#8fb3ff" stroke-width="3" fill="none"/>
+    <path d="M280 225 L270 217 M280 225 L270 233" stroke="#8fb3ff" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Step 2 -->
+  <g>
+    <rect x="300" y="150" width="200" height="150" rx="14" fill="#155eef"/>
+    <text x="400" y="205" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">PSSR AI model</text>
+    <text x="400" y="232" font-family="Inter, Arial, sans-serif" font-size="14" fill="#d6e4ff" text-anchor="middle">neural upscaler</text>
+    <text x="400" y="262" font-family="Inter, Arial, sans-serif" font-size="13" fill="#d6e4ff" text-anchor="middle">reconstructs detail</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g>
+    <path d="M510 225 H540" stroke="#8fb3ff" stroke-width="3" fill="none"/>
+    <path d="M540 225 L530 217 M540 225 L530 233" stroke="#8fb3ff" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Step 3 -->
+  <g>
+    <rect x="560" y="150" width="200" height="150" rx="14" fill="#132447"/>
+    <text x="660" y="205" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Near-4K output</text>
+    <text x="660" y="232" font-family="Inter, Arial, sans-serif" font-size="14" fill="#98a2b3" text-anchor="middle">sharp, stable frames</text>
+    <text x="660" y="262" font-family="Inter, Arial, sans-serif" font-size="13" fill="#8fb3ff" text-anchor="middle">higher frame rate</text>
+  </g>
+
+  <text x="40" y="360" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">Rendering lower and upscaling lets the Pro hold higher frame rates without sacrificing clarity.</text>
+</svg>

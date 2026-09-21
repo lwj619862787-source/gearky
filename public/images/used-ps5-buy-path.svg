@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">Where to buy a used PS5 first</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">Our recommended order, from safest to last resort</text>
+
+  <!-- Step 1 -->
+  <g>
+    <rect x="40" y="112" width="720" height="56" rx="12" fill="#155eef"/>
+    <circle cx="82" cy="140" r="17" fill="#ffffff"/>
+    <text x="82" y="146" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#155eef" text-anchor="middle">1</text>
+    <text x="116" y="146" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">PlayStation Direct — $499 refurbished Slim, buy it if it's in stock</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g>
+    <rect x="40" y="180" width="720" height="56" rx="12" fill="#155eef"/>
+    <circle cx="82" cy="208" r="17" fill="#ffffff"/>
+    <text x="82" y="214" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#155eef" text-anchor="middle">2</text>
+    <text x="116" y="214" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Amazon Renewed — best fallback when Direct is out of stock</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g>
+    <rect x="40" y="248" width="720" height="56" rx="12" fill="#132447"/>
+    <circle cx="82" cy="276" r="17" fill="#2a4f9e"/>
+    <text x="82" y="282" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="116" y="282" font-family="Inter, Arial, sans-serif" font-size="17" fill="#ffffff">GameStop — inspect the unit in store before you pay</text>
+  </g>
+
+  <!-- Step 4 -->
+  <g>
+    <rect x="40" y="316" width="720" height="56" rx="12" fill="#132447"/>
+    <circle cx="82" cy="344" r="17" fill="#2a4f9e"/>
+    <text x="82" y="350" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="116" y="350" font-family="Inter, Arial, sans-serif" font-size="17" fill="#ffffff">Best Buy — worth a quick look for open-box stock</text>
+  </g>
+
+  <!-- Step 5 -->
+  <g>
+    <rect x="40" y="384" width="720" height="56" rx="12" fill="#132447"/>
+    <circle cx="82" cy="412" r="17" fill="#2a4f9e"/>
+    <text x="82" y="418" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="116" y="418" font-family="Inter, Arial, sans-serif" font-size="17" fill="#ffffff">eBay / local sellers — last resort, meet and test in person</text>
+  </g>
+</svg>

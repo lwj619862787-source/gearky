@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">Key specs compared</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">Standard PS5 vs PS5 Pro hardware</text>
+
+  <!-- Legend -->
+  <g>
+    <rect x="40" y="112" width="14" height="14" rx="3" fill="#2a4f9e"/>
+    <text x="62" y="125" font-family="Inter, Arial, sans-serif" font-size="14" fill="#98a2b3">PS5</text>
+    <rect x="130" y="112" width="14" height="14" rx="3" fill="#155eef"/>
+    <text x="152" y="125" font-family="Inter, Arial, sans-serif" font-size="14" fill="#98a2b3">PS5 Pro</text>
+  </g>
+
+  <!-- GPU TFLOPs -->
+  <text x="40" y="178" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">GPU compute</text>
+  <rect x="40" y="190" width="300" height="22" rx="6" fill="#2a4f9e"/>
+  <text x="48" y="206" font-family="Inter, Arial, sans-serif" font-size="13" fill="#ffffff">10.28 TFLOPs</text>
+  <rect x="40" y="218" width="470" height="22" rx="6" fill="#155eef"/>
+  <text x="48" y="234" font-family="Inter, Arial, sans-serif" font-size="13" fill="#ffffff">16.7 TFLOPs (+62%)</text>
+
+  <!-- Memory bandwidth -->
+  <text x="40" y="286" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Memory bandwidth</text>
+  <rect x="40" y="298" width="360" height="22" rx="6" fill="#2a4f9e"/>
+  <text x="48" y="314" font-family="Inter, Arial, sans-serif" font-size="13" fill="#ffffff">448 GB/s</text>
+  <rect x="40" y="326" width="460" height="22" rx="6" fill="#155eef"/>
+  <text x="48" y="342" font-family="Inter, Arial, sans-serif" font-size="13" fill="#ffffff">576 GB/s (+28%)</text>
+
+  <!-- Storage -->
+  <text x="40" y="394" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Storage</text>
+  <rect x="40" y="406" width="300" height="22" rx="6" fill="#2a4f9e"/>
+  <text x="48" y="422" font-family="Inter, Arial, sans-serif" font-size="13" fill="#ffffff">825GB – 1TB</text>
+  <rect x="40" y="434" width="560" height="22" rx="6" fill="#155eef"/>
+  <text x="48" y="450" font-family="Inter, Arial, sans-serif" font-size="13" fill="#ffffff">2TB</text>
+</svg>
