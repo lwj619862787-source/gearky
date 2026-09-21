@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">The PS5 power cord, explained</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">A standard IEC C7 "figure-8" connector — nothing proprietary</text>
+
+  <!-- C7 connector diagram -->
+  <g>
+    <rect x="40" y="120" width="300" height="210" rx="14" fill="#132447"/>
+    <text x="190" y="164" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">IEC C7 plug</text>
+    <text x="190" y="196" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3" text-anchor="middle">"figure-8" / 2-prong</text>
+    <rect x="120" y="220" width="140" height="80" rx="40" fill="#155eef"/>
+    <circle cx="160" cy="260" r="16" fill="#0e1a30"/>
+    <circle cx="220" cy="260" r="16" fill="#0e1a30"/>
+    <text x="190" y="320" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff" text-anchor="middle">non-polarized</text>
+  </g>
+
+  <!-- Specs -->
+  <g>
+    <rect x="360" y="120" width="400" height="210" rx="14" fill="#132447"/>
+    <text x="390" y="156" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Specs to look for</text>
+    <text x="390" y="188" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">18 AWG wire gauge</text>
+    <text x="390" y="216" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">7A / 125V rating</text>
+    <text x="390" y="244" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">UL or ETL listed</text>
+    <text x="390" y="272" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">3–10 ft length</text>
+    <text x="390" y="300" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">100–240V, works worldwide</text>
+  </g>
+
+  <text x="40" y="380" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">The important part</text>
+  <text x="40" y="410" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">Any standard C7 cable works. You don&apos;t need a Sony-branded cord, so a $5–$10</text>
+  <text x="40" y="434" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">third-party replacement is just as good as the original.</text>
+</svg>

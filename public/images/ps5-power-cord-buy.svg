@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">What a PS5 power cord costs</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">Real third-party prices on Amazon (2026)</text>
+
+  <!-- Single -->
+  <g>
+    <rect x="40" y="112" width="350" height="130" rx="14" fill="#132447"/>
+    <text x="70" y="152" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Single cord</text>
+    <text x="70" y="214" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">$5 – $10</text>
+    <text x="70" y="236" font-family="Inter, Arial, sans-serif" font-size="14" fill="#8fb3ff">3ft to 10ft lengths</text>
+  </g>
+
+  <!-- 2-pack -->
+  <g>
+    <rect x="410" y="112" width="350" height="130" rx="14" fill="#155eef"/>
+    <text x="440" y="152" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">2-pack</text>
+    <text x="440" y="214" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">$8 – $9</text>
+    <text x="440" y="236" font-family="Inter, Arial, sans-serif" font-size="14" fill="#d6e4ff">about $4 per cord</text>
+  </g>
+
+  <!-- Length guide -->
+  <g>
+    <rect x="40" y="258" width="720" height="130" rx="14" fill="#132447"/>
+    <text x="70" y="296" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Pick the right length</text>
+    <text x="70" y="326" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">3 ft — console next to outlet</text>
+    <text x="70" y="352" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">6–6.6 ft — typical living-room setup (most popular)</text>
+    <text x="70" y="378" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">10 ft — TV unit far from the wall outlet</text>
+  </g>
+</svg>
