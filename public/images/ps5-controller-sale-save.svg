@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">How to save on a PS5 controller</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">Four ways to pay less than full price</text>
+
+  <!-- 1 -->
+  <g>
+    <rect x="40" y="112" width="350" height="120" rx="14" fill="#155eef"/>
+    <circle cx="82" cy="172" r="17" fill="#ffffff"/>
+    <text x="82" y="178" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#155eef" text-anchor="middle">1</text>
+    <text x="116" y="164" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Wait for a sale event</text>
+    <text x="116" y="192" font-family="Inter, Arial, sans-serif" font-size="14" fill="#d6e4ff">Black Friday / Prime Day / holidays</text>
+  </g>
+
+  <!-- 2 -->
+  <g>
+    <rect x="410" y="112" width="350" height="120" rx="14" fill="#132447"/>
+    <circle cx="452" cy="172" r="17" fill="#2a4f9e"/>
+    <text x="452" y="178" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="486" y="164" font-family="Inter, Arial, sans-serif" font-size="17" fill="#ffffff">Buy certified refurbished</text>
+    <text x="486" y="192" font-family="Inter, Arial, sans-serif" font-size="14" fill="#98a2b3">Save $10–$16 every day</text>
+  </g>
+
+  <!-- 3 -->
+  <g>
+    <rect x="40" y="248" width="350" height="120" rx="14" fill="#132447"/>
+    <circle cx="82" cy="308" r="17" fill="#2a4f9e"/>
+    <text x="82" y="314" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="116" y="300" font-family="Inter, Arial, sans-serif" font-size="17" fill="#ffffff">Trade in an old pad</text>
+    <text x="116" y="328" font-family="Inter, Arial, sans-serif" font-size="14" fill="#98a2b3">GameStop / Best Buy credit</text>
+  </g>
+
+  <!-- 4 -->
+  <g>
+    <rect x="410" y="248" width="350" height="120" rx="14" fill="#132447"/>
+    <circle cx="452" cy="308" r="17" fill="#2a4f9e"/>
+    <text x="452" y="314" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="486" y="300" font-family="Inter, Arial, sans-serif" font-size="17" fill="#ffffff">Bundle with a console</text>
+    <text x="486" y="328" font-family="Inter, Arial, sans-serif" font-size="14" fill="#98a2b3">pads often discounted in kits</text>
+  </g>
+</svg>
