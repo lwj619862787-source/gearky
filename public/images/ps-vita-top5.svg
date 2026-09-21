@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">The top 5 PS Vita games</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">Our picks for the best the handheld has to offer</text>
+
+  <g>
+    <rect x="40" y="116" width="720" height="56" rx="12" fill="#155eef"/>
+    <circle cx="82" cy="144" r="17" fill="#ffffff"/>
+    <text x="82" y="150" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#155eef" text-anchor="middle">1</text>
+    <text x="116" y="150" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Gravity Rush</text>
+    <text x="600" y="150" font-family="Inter, Arial, sans-serif" font-size="14" fill="#d6e4ff">action adventure</text>
+  </g>
+
+  <g>
+    <rect x="40" y="182" width="720" height="56" rx="12" fill="#132447"/>
+    <circle cx="82" cy="210" r="17" fill="#2a4f9e"/>
+    <text x="82" y="216" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="116" y="216" font-family="Inter, Arial, sans-serif" font-size="17" fill="#ffffff">Persona 4 Golden</text>
+    <text x="600" y="216" font-family="Inter, Arial, sans-serif" font-size="14" fill="#8fb3ff">JRPG</text>
+  </g>
+
+  <g>
+    <rect x="40" y="248" width="720" height="56" rx="12" fill="#132447"/>
+    <circle cx="82" cy="276" r="17" fill="#2a4f9e"/>
+    <text x="82" y="282" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="116" y="282" font-family="Inter, Arial, sans-serif" font-size="17" fill="#ffffff">Tearaway</text>
+    <text x="600" y="282" font-family="Inter, Arial, sans-serif" font-size="14" fill="#8fb3ff">creative platformer</text>
+  </g>
+
+  <g>
+    <rect x="40" y="314" width="720" height="56" rx="12" fill="#132447"/>
+    <circle cx="82" cy="342" r="17" fill="#2a4f9e"/>
+    <text x="82" y="348" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="116" y="348" font-family="Inter, Arial, sans-serif" font-size="17" fill="#ffffff">Hotline Miami</text>
+    <text x="600" y="348" font-family="Inter, Arial, sans-serif" font-size="14" fill="#8fb3ff">top-down action</text>
+  </g>
+
+  <g>
+    <rect x="40" y="380" width="720" height="56" rx="12" fill="#132447"/>
+    <circle cx="82" cy="408" r="17" fill="#2a4f9e"/>
+    <text x="82" y="414" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="116" y="414" font-family="Inter, Arial, sans-serif" font-size="17" fill="#ffffff">TxK</text>
+    <text x="600" y="414" font-family="Inter, Arial, sans-serif" font-size="14" fill="#8fb3ff">tube shooter</text>
+  </g>
+</svg>
