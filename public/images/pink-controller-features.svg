@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">What every DualSense includes</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">The same features on every color, including pink</text>
+
+  <g>
+    <rect x="40" y="112" width="350" height="150" rx="14" fill="#132447"/>
+    <text x="70" y="150" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">Haptic feedback</text>
+    <text x="70" y="178" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">Detailed rumble that reacts to the game</text>
+    <text x="70" y="204" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">Feel surfaces, impacts, and textures</text>
+
+    <rect x="410" y="112" width="350" height="150" rx="14" fill="#132447"/>
+    <text x="440" y="150" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">Adaptive triggers</text>
+    <text x="440" y="178" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">Resistance changes per action</text>
+    <text x="440" y="204" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">Tension for bows, triggers, pedals</text>
+  </g>
+
+  <g>
+    <rect x="40" y="282" width="350" height="130" rx="14" fill="#132447"/>
+    <text x="70" y="320" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">Built-in mic &amp; speaker</text>
+    <text x="70" y="348" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">Chat without a headset</text>
+    <text x="70" y="374" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">3.5mm jack for wired audio</text>
+
+    <rect x="410" y="282" width="350" height="130" rx="14" fill="#132447"/>
+    <text x="440" y="320" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">Motion &amp; touchpad</text>
+    <text x="440" y="348" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">Gyroscope + accelerometer</text>
+    <text x="440" y="374" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">Works on PS5, PC, and mobile</text>
+  </g>
+</svg>

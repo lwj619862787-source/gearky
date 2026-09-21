@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">Pink &amp; red DualSense options</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">Official Sony colors closest to pink</text>
+
+  <!-- Nova Pink -->
+  <g>
+    <rect x="40" y="120" width="165" height="200" rx="14" fill="#f2a0c0"/>
+    <rect x="40" y="336" width="165" height="44" rx="10" fill="#132447"/>
+    <text x="122" y="364" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Nova Pink</text>
+  </g>
+
+  <!-- Cosmic Red -->
+  <g>
+    <rect x="222" y="120" width="165" height="200" rx="14" fill="#a5243d"/>
+    <rect x="222" y="336" width="165" height="44" rx="10" fill="#132447"/>
+    <text x="304" y="364" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Cosmic Red</text>
+  </g>
+
+  <!-- Chroma Pearl -->
+  <g>
+    <rect x="404" y="120" width="165" height="200" rx="14" fill="#e8d5d8"/>
+    <rect x="404" y="336" width="165" height="44" rx="10" fill="#132447"/>
+    <text x="486" y="364" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Chroma Pearl</text>
+  </g>
+
+  <!-- Volcanic Red -->
+  <g>
+    <rect x="586" y="120" width="165" height="200" rx="14" fill="#c2242f"/>
+    <rect x="586" y="336" width="165" height="44" rx="10" fill="#132447"/>
+    <text x="668" y="364" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Volcanic Red</text>
+  </g>
+
+  <text x="40" y="416" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">Nova Pink is Sony's only true pink DualSense. The rest are the closest red / pearl alternatives.</text>
+</svg>
