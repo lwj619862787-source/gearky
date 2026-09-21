@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">The two PS1 controllers</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">Know the difference before you buy</text>
+
+  <!-- Digital Controller -->
+  <g>
+    <rect x="40" y="120" width="350" height="250" rx="16" fill="#132447"/>
+    <rect x="40" y="120" width="350" height="6" rx="3" fill="#2a4f9e"/>
+    <text x="70" y="166" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Original Controller</text>
+    <text x="70" y="194" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">SCPH-1010 (1994)</text>
+    <text x="70" y="232" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">No analog sticks</text>
+    <text x="70" y="258" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">D-pad only</text>
+    <text x="70" y="284" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">No rumble</text>
+    <text x="70" y="310" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">Grey, 4 face buttons</text>
+    <text x="70" y="350" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff">The true "PS1" pad</text>
+  </g>
+
+  <!-- DualShock -->
+  <g>
+    <rect x="410" y="120" width="350" height="250" rx="16" fill="#155eef"/>
+    <text x="440" y="166" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">DualShock</text>
+    <text x="440" y="194" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">SCPH-1200 (1997)</text>
+    <text x="440" y="232" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">Dual analog sticks</text>
+    <text x="440" y="258" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">Vibration motors</text>
+    <text x="440" y="284" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">Grey, larger grips</text>
+    <text x="440" y="310" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">Became the standard</text>
+    <text x="440" y="350" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff">What most people mean</text>
+  </g>
+</svg>
