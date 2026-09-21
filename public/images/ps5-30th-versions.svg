@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">Two 30th Anniversary controllers</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">Original list prices — both are now sold out</text>
+
+  <!-- DualSense 30th -->
+  <g>
+    <rect x="40" y="120" width="350" height="270" rx="16" fill="#132447"/>
+    <rect x="40" y="120" width="350" height="6" rx="3" fill="#8c8c8c"/>
+    <text x="70" y="166" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">DualSense 30th</text>
+    <text x="70" y="194" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">Anniversary Edition</text>
+    <text x="70" y="260" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800" fill="#ffffff">$79.99</text>
+    <text x="70" y="290" font-family="Inter, Arial, sans-serif" font-size="15" fill="#8fb3ff">original list price</text>
+    <text x="70" y="340" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">Standard DualSense features</text>
+    <text x="70" y="366" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">Haptics + adaptive triggers</text>
+  </g>
+
+  <!-- DualSense Edge 30th -->
+  <g>
+    <rect x="410" y="120" width="350" height="270" rx="16" fill="#155eef"/>
+    <text x="440" y="166" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">DualSense Edge 30th</text>
+    <text x="440" y="194" font-family="Inter, Arial, sans-serif" font-size="16" fill="#d6e4ff">Anniversary Edition</text>
+    <text x="440" y="260" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800" fill="#ffffff">$219.99</text>
+    <text x="440" y="290" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">original list price</text>
+    <text x="440" y="340" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">Pro-grade: swappable sticks</text>
+    <text x="440" y="366" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">Back buttons + case</text>
+  </g>
+</svg>
