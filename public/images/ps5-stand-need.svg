@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">Does your PS5 need a stand?</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">It depends on which model you own</text>
+
+  <!-- Original -->
+  <g>
+    <rect x="40" y="120" width="350" height="220" rx="16" fill="#132447"/>
+    <rect x="40" y="120" width="350" height="6" rx="3" fill="#2a4f9e"/>
+    <text x="70" y="166" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Original PS5 (2020)</text>
+    <text x="70" y="198" font-family="Inter, Arial, sans-serif" font-size="16" fill="#8fb3ff">Stand included in box</text>
+    <text x="70" y="234" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">Base works for both</text>
+    <text x="70" y="260" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">horizontal and vertical</text>
+    <text x="70" y="296" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">Only buy a new one</text>
+    <text x="70" y="322" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">if you lost the original</text>
+  </g>
+
+  <!-- Slim / Pro -->
+  <g>
+    <rect x="410" y="120" width="350" height="220" rx="16" fill="#155eef"/>
+    <text x="440" y="166" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">PS5 Slim &amp; Pro</text>
+    <text x="440" y="198" font-family="Inter, Arial, sans-serif" font-size="16" fill="#d6e4ff">No vertical stand included</text>
+    <text x="440" y="234" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">Horizontal feet only</text>
+    <text x="440" y="260" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">Vertical = buy a stand</text>
+    <text x="440" y="296" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">Official $29 or</text>
+    <text x="440" y="322" font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e4ff">third-party $10–$16</text>
+  </g>
+</svg>

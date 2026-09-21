@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0e1a30"/>
+  <text x="40" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">What a PS5 stand costs</text>
+  <text x="40" y="86" font-family="Inter, Arial, sans-serif" font-size="16" fill="#98a2b3">Real prices on Amazon (2026)</text>
+
+  <!-- Official -->
+  <g>
+    <rect x="40" y="112" width="230" height="140" rx="14" fill="#132447"/>
+    <text x="64" y="152" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Sony official</text>
+    <text x="64" y="214" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" fill="#ffffff">$29</text>
+    <text x="64" y="238" font-family="Inter, Arial, sans-serif" font-size="14" fill="#8fb3ff">list price</text>
+  </g>
+
+  <!-- Third party -->
+  <g>
+    <rect x="285" y="112" width="230" height="140" rx="14" fill="#155eef"/>
+    <text x="309" y="152" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Third-party</text>
+    <text x="309" y="214" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" fill="#ffffff">$10–$16</text>
+    <text x="309" y="238" font-family="Inter, Arial, sans-serif" font-size="14" fill="#d6e4ff">best value</text>
+  </g>
+
+  <!-- Multi-function -->
+  <g>
+    <rect x="530" y="112" width="230" height="140" rx="14" fill="#132447"/>
+    <text x="554" y="152" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Charging / cooling</text>
+    <text x="554" y="214" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" fill="#ffffff">$19–$32</text>
+    <text x="554" y="238" font-family="Inter, Arial, sans-serif" font-size="14" fill="#8fb3ff">all-in-one stands</text>
+  </g>
+
+  <!-- Tip -->
+  <g>
+    <rect x="40" y="278" width="720" height="110" rx="14" fill="#132447"/>
+    <text x="70" y="316" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">The takeaway</text>
+    <text x="70" y="346" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">A basic third-party stand does the exact same job as the $29 official one for a third of the price.</text>
+    <text x="70" y="372" font-family="Inter, Arial, sans-serif" font-size="15" fill="#98a2b3">Only pay more if you want built-in charging or cooling.</text>
+  </g>
+</svg>
