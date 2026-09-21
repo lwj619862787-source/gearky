@@ -13,7 +13,7 @@
 
 - 定位：PlayStation 配件/升级英文利基站（affiliate），主攻手柄/外设 + SSD 存储 + 主机贴膜/二手
 - 市场：美国（us），Amazon Associates 变现为主
-- 关键词总量：137 个唯一词（买方意图 + KD≤35 + 月搜索量≥1000，已剔除折扣码类词）
+- 关键词总量：131 个唯一词（买方意图 + KD≤35 + 月搜索量≥1000，已剔除折扣码类与变现特殊词）
 - Silo 结构：`/controllers` `/storage` `/console` `/deals` 四大栏目，栏目间用「相关推荐」内链互联
 
 ## 优先级定义
@@ -35,16 +35,16 @@
 |---|---|---|---|
 | A 手柄与外设 | 68 | 180,600 | 3 |
 | B 存储升级 | 9 | 12,500 | 2 |
-| C 主机美容+二手 | 35 | 103,200 | 3 |
-| D Deals/Guides | 25 | 54,900 | 1 |
-| **合计** | **137** | **351,200** | **9** |
+| C 主机美容+二手 | 34 | 101,300 | 3 |
+| D Deals/Guides | 20 | 47,800 | 1 |
+| **合计** | **131** | **342,200** | **9** |
 
 ### 各支柱策略
 
 - **A 手柄与外设（核心）**：用 `hall effect ps5 controller` / `ps5 controller skin` 两条 KD15 锚点词起站，再铺 battery / mic / cable / charging / stand 等长尾，构成完整手柄专题
 - **B 存储升级（高佣金）**：只保留 `best ssd for ps5`、`ps5 ssd 2tb`、`ps4 ssd`、`ps4 storage`、`ps5 hard drive upgrade` 等 PS 专属词；通用 SSD 词已剔除
-- **C 主机美容+二手**：`ps5 skins`、`sell ps5`、`used ps5` 做交易/落地页；PS5 vs Xbox 对比评测引流
-- **D Deals/Guides（补充）**：游戏榜单 / 租赁指南做流量内容；折扣码类词已全部剔除
+- **C 主机美容+二手**：`ps5 skins`、`used ps5` 做落地页；PS5 vs Xbox 对比评测引流
+- **D Deals/Guides（补充）**：游戏榜单做流量内容；折扣码类与变现特殊词已全部剔除
 
 ### 内容阶段（参考，实际以「发布时间规划」为准）
 
@@ -55,7 +55,7 @@
 ### 变现方式
 
 - Amazon Associates（手柄/SSD/贴膜等实物佣金 3–7%）为主
-- 租赁/卖机等「变现特殊」页接导流或 CPA
+- 「变现特殊」页已全部剔除，仅保留实物 affiliate 佣金路线
 - 后期可加展示广告（Mediavine / Raptive）
 
 ### 上线顺序
@@ -65,13 +65,13 @@ A 手柄 → B 存储 → C 贴膜/二手 → D 折扣/游戏（逐步堆话题�
 ### 风险提示
 
 - 商标词不可出现在域名/品牌名中
-- 折扣码类词已全部剔除；仍保留的「变现特殊」页（rental / free ps5 / ps plus deal）占比需 <10%
+- 折扣码类词与「变现特殊」页（sell ps5 / rental / free ps5 / ps plus deal 等）已全部剔除
 
 ## 进度概览
 
-- 已发布：**10 篇**（9 篇命中计划词 + 1 篇清单外补充）
-- 剩余待写：**128 词**
-- 命中计划词：9 / 137
+- 已发布：**0 篇**（原 10 篇已删除，待重写）
+- 剩余待写：**131 词**（含首批计划 10 词）
+- 命中计划词：0 / 131
 
 ---
 
@@ -81,7 +81,7 @@ A 手柄 → B 存储 → C 贴膜/二手 → D 折扣/游戏（逐步堆话题�
 
 | 关键词 | Vol | KD | 类型 | 状态 |
 |---|---|---|---|---|
-| hall effect ps5 controller | 4400 | 15 | 单品评测 | ✅ `/controllers/hall-effect-ps5-controller/` |
+| hall effect ps5 controller | 4400 | 15 | 单品评测 | ❌ |
 | ps5 controller skin | 2900 | 15 | 单品评测 | ❌ |
 
 ### P1 重点（35）
@@ -90,7 +90,7 @@ A 手柄 → B 存储 → C 贴膜/二手 → D 折扣/游戏（逐步堆话题�
 |---|---|---|---|---|
 | ps5 bluetooth | 1300 | 21 | 单品评测 | ❌ |
 | ps5 controller cover | 1300 | 21 | 单品评测 | ❌ |
-| ps5 controller battery | 1600 | 22 | 单品评测 | ✅ `/controllers/best-ps5-controller-battery/` |
+| ps5 controller battery | 1600 | 22 | 单品评测 | ❌ |
 | best ethernet cable for ps5 | 1000 | 22 | 榜单/评测 | ❌ |
 | refurbished ps5 controller | 1000 | 22 | 指南/落地页 | ❌ |
 | usb c cable for ps5 controller | 1900 | 23 | 单品评测 | ❌ |
@@ -155,7 +155,7 @@ A 手柄 → B 存储 → C 贴膜/二手 → D 折扣/游戏（逐步堆话题�
 | ps5 stand | 8100 | 34 | 单品评测 | ❌ |
 | ps5 controller colors | 2900 | 34 | 单品评测 | ❌ |
 | ps5 controller professional | 1600 | 34 | 单品评测 | ❌ |
-| ps5 controller charging station | 1000 | 34 | 单品评测 | ✅ `/controllers/best-ps5-controller-charging-dock/` |
+| ps5 controller charging station | 1000 | 34 | 单品评测 | ❌ |
 | playstation 2 controller | 2400 | 35 | 单品评测 | ❌ |
 | gaming remote for mobile | 2400 | 35 | 单品评测 | ❌ |
 | phone game controller | 1600 | 35 | 单品评测 | ❌ |
@@ -172,20 +172,20 @@ A 手柄 → B 存储 → C 贴膜/二手 → D 折扣/游戏（逐步堆话题�
 | ps4 external hard disk | 1300 | 26 | 单品评测 | ❌ |
 | ps4 storage | 1300 | 26 | 单品评测 | ❌ |
 | best ssd for ps5 | 2400 | 27 | 榜单/评测 | ❌ |
-| ps5 ssd 2tb | 1600 | 27 | 单品评测 | ✅ `/storage/best-ps5-ssd-2tb/` |
+| ps5 ssd 2tb | 1600 | 27 | 单品评测 | ❌ |
 
 ### P2 放量/后期（4）
 
 | 关键词 | Vol | KD | 类型 | 状态 |
 |---|---|---|---|---|
-| ps5 ssd with heatsink | 1000 | 30 | 单品评测 | ✅ `/storage/ps5-ssd-heatsink-guide/` |
+| ps5 ssd with heatsink | 1000 | 30 | 单品评测 | ❌ |
 | ps4 ssd | 1300 | 31 | 单品评测 | ❌ |
 | ps5 hard drive upgrade | 1600 | 35 | 单品评测 | ❌ |
 | usb extended storage ps5 | 1000 | 35 | 单品评测 | ❌ |
 
 ---
 
-## C 主机美容+二手（35 词）
+## C 主机美容+二手（34 词）
 
 ### P0 起步锚点（3）
 
@@ -195,13 +195,12 @@ A 手柄 → B 存储 → C 贴膜/二手 → D 折扣/游戏（逐步堆话题�
 | audio keeps cutting out after a while on playstation 5 | 1000 | 18 | 问答/指南 | ❌ |
 | is ps5 slim price hike still cheaper than series x | 1600 | 20 | 指南/落地页 | ❌ |
 
-### P1 重点（14）
+### P1 重点（13）
 
 | 关键词 | Vol | KD | 类型 | 状态 |
 |---|---|---|---|---|
 | playstation portal review | 4400 | 23 | 单品评测 | ❌ |
-| ps5 skins | 3600 | 23 | 单品评测 | ✅ `/console/best-ps5-skins/` |
-| sell ps5 | 1900 | 23 | 指南/落地页 | ✅ `/console/how-to-sell-a-used-ps5/`（变现特殊） |
+| ps5 skins | 3600 | 23 | 单品评测 | ❌ |
 | 848gb ps5 slim | 1600 | 23 | 单品评测 | ❌ |
 | 1tb on ps4 | 1000 | 23 | 单品评测 | ❌ |
 | price hike 5 years consoles launch | 1300 | 24 | 指南/落地页 | ❌ |
@@ -219,7 +218,7 @@ A 手柄 → B 存储 → C 贴膜/二手 → D 折扣/游戏（逐步堆话题�
 | 关键词 | Vol | KD | 类型 | 状态 |
 |---|---|---|---|---|
 | used ps5 | 22200 | 30 | 指南/落地页 | ❌ |
-| ps5 vs xbox series x | 5400 | 30 | 对比评测 | ✅ `/console/ps5-vs-xbox-series-x/` |
+| ps5 vs xbox series x | 5400 | 30 | 对比评测 | ❌ |
 | playstation portable 2 | 4400 | 30 | 单品评测 | ❌ |
 | 4k gaming systems | 1900 | 30 | 单品评测 | ❌ |
 | playstation portal 2 | 1900 | 30 | 单品评测 | ❌ |
@@ -239,32 +238,23 @@ A 手柄 → B 存储 → C 贴膜/二手 → D 折扣/游戏（逐步堆话题�
 
 ---
 
-## D Deals/Guides（25 词）
+## D Deals/Guides（20 词）
 
-> 注意：此支柱仍含少量「变现特殊」页（租赁/导流），占比需控制在 <10%；折扣码类词已全部剔除。
+> 注意：折扣码类词与「变现特殊」页均已全部剔除。
 
-### P0 起步锚点（2）
-
-| 关键词 | Vol | KD | 类型 | 状态 |
-|---|---|---|---|---|
-| ps5 rental | 1300 | 5 | 指南/落地页 | ❌（变现特殊） |
-| ps5 rent | 1600 | 6 | 指南/落地页 | ❌（变现特殊） |
-
-### P1 重点（9）
+### P1 重点（7）
 
 | 关键词 | Vol | KD | 类型 | 状态 |
 |---|---|---|---|---|
-| free world 3rd person view action games for playstation | 1600 | 21 | 指南/落地页 | ❌（变现特殊） |
-| best single player ps5 games | 1000 | 21 | 榜单/评测 | ✅ `/deals/best-single-player-ps5-games/` |
+| best single player ps5 games | 1000 | 21 | 榜单/评测 | ❌ |
 | playstation vita vs playstation portable | 1900 | 23 | 对比评测 | ❌ |
 | ps5 sports games | 1000 | 24 | 单品评测 | ❌ |
 | ps4 games for kids | 1900 | 26 | 单品评测 | ❌ |
 | playstation vita vs psp | 1300 | 26 | 对比评测 | ❌ |
 | ps vita 2 | 2400 | 28 | 单品评测 | ❌ |
-| free ps5 | 1300 | 28 | 指南/落地页 | ❌（变现特殊） |
 | ps5 action games | 1000 | 28 | 单品评测 | ❌ |
 
-### P2 放量/后期（14）
+### P2 放量/后期（13）
 
 | 关键词 | Vol | KD | 类型 | 状态 |
 |---|---|---|---|---|
@@ -281,15 +271,14 @@ A 手柄 → B 存储 → C 贴膜/二手 → D 折扣/游戏（逐步堆话题�
 | ps4 games download | 1300 | 33 | 单品评测 | ❌ |
 | ps vita games | 12100 | 35 | 单品评测 | ❌ |
 | best multiplayer ps5 games | 2400 | 35 | 榜单/评测 | ❌ |
-| ps plus deal | 1300 | 35 | 落地页 | ❌（变现特殊） |
 
 ---
 
 ## 发布时间规划（最新计划表）
 
-**节奏**：每周 3 篇。批次 0 = 首次发布（已完成）；批次 1 起按 P0 → P1 → P2 依次排期，每批 3 词。
+**节奏**：每周 3 篇。首批计划（10 词）优先；批次 0（原已发布）待重写；其后按 P0 → P1 → P2 依次排期，每批 3 词。
 
-### 批次 0 · 首次发布（已完成 10 篇）
+### 批次 0 · 待重写（9 篇）
 
 | 关键词 | 类型 | slug |
 |---|---|---|
@@ -301,17 +290,33 @@ A 手柄 → B 存储 → C 贴膜/二手 → D 折扣/游戏（逐步堆话题�
 | ps5 ssd with heatsink | 单品评测 | /storage/ps5-ssd-heatsink-guide/ |
 | ps5 vs xbox series x | 对比评测 | /console/ps5-vs-xbox-series-x/ |
 | ps5 skins | 单品评测 | /console/best-ps5-skins/ |
-| sell ps5 | 指南/落地页 | /console/how-to-sell-a-used-ps5/ |
 | best single player ps5 games | 榜单/评测 | /deals/best-single-player-ps5-games/ |
 
-### P0 · 剩余 6 词（批次 01–02）
+### 首批计划（第一批上线 · 10 个流量大词，按搜索量降序）
+
+> 选取依据：综合「搜索量 ÷ KD」与纯搜索量口径，全量 Top 10 大词（均已排除已发布与变现特殊页）。
+
+| # | 关键词 | Vol | KD | 支柱 | 类型 |
+|---|---|---|---|---|---|
+| 1 | used ps5 | 22200 | 30 | C | 指南/落地 |
+| 2 | ps5 pro vs ps5 | 14800 | 31 | C | 对比评测 |
+| 3 | pink ps5 controller | 12100 | 29 | A | 单品评测 |
+| 4 | ps5 30th anniversary controller | 12100 | 32 | A | 单品评测 |
+| 5 | ps vita games | 12100 | 35 | D | 榜单/评测 |
+| 6 | ps5 controller sale | 9900 | 32 | A | 单品评测 |
+| 7 | ps5 power cord | 9900 | 33 | A | 单品评测 |
+| 8 | ps1 controller | 8100 | 28 | A | 单品评测 |
+| 9 | ps5 stand | 8100 | 34 | A | 单品评测 |
+| 10 | used ps4 | 8100 | 34 | C | 指南/落地 |
+
+### P0 · 剩余 4 词（批次 01–02）
 
 | 批次 | 关键词 |
 |---|---|
 | 01 | ps5 controller skin · hybrid gaming console · audio keeps cutting out after a while on playstation 5 |
-| 02 | is ps5 slim price hike still cheaper than series x · ps5 rental · ps5 rent |
+| 02 | is ps5 slim price hike still cheaper than series x |
 
-### P1 · 剩余 58 词（批次 03–22）
+### P1 · 剩余 56 词（批次 03–22）
 
 | 批次 | 关键词 |
 |---|---|
@@ -331,12 +336,12 @@ A 手柄 → B 存储 → C 贴膜/二手 → D 折扣/游戏（逐步堆话题�
 | 16 | 848gb ps5 slim · 1tb on ps4 · price hike 5 years consoles launch |
 | 17 | does ps5 pro have disc drive · why is there no web browser on ps5 · xbox or ps5 |
 | 18 | ps5 slim black friday · ps5 nintendo switch · xbox vs ps5 |
-| 19 | white ps4 · ps5 box · free world 3rd person view action games for playstation |
+| 19 | white ps4 · ps5 box |
 | 20 | playstation vita vs playstation portable · ps5 sports games · ps4 games for kids |
-| 21 | playstation vita vs psp · ps vita 2 · free ps5 |
+| 21 | playstation vita vs psp · ps vita 2 |
 | 22 | ps5 action games |
 
-### P2 · 剩余 64 词（批次 23–44）
+### P2 · 剩余 63 词（批次 23–44）
 
 | 批次 | 关键词 |
 |---|---|
@@ -361,10 +366,9 @@ A 手柄 → B 存储 → C 贴膜/二手 → D 折扣/游戏（逐步堆话题�
 | 41 | ps4 games new games · best rpg games ps5 · game consoles price hike |
 | 42 | ps4 exclusives · dl games ps4 · ps5 games for kids |
 | 43 | ps4 games download · ps vita games · best multiplayer ps5 games |
-| 44 | ps plus deal |
 
 ### 变现特殊页说明
 
 - 折扣码类关键词已**全部剔除**（store/discount/promo/coupon/code 等 11 词不再列入计划）
-- 仍保留的「变现特殊」页：ps5 rental/rent、free ps5、free world...action games、ps plus deal，为导流/CPA 内容，占比需 <10%
+- 「变现特殊」页已**全部剔除**：sell ps5、ps5 rental/rent、free ps5、free world...action games、ps plus deal
 - 写前先查本表该批次是否已打 ✅，避免重复
